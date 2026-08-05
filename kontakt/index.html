@@ -200,6 +200,17 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
         font-weight: 600 !important;
         display: block !important;
     }
+    .form-success-msg {
+        display: none;
+        background: rgba(16, 185, 129, 0.1);
+        border: 1px solid #10b981;
+        color: #10b981;
+        padding: 14px;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: 600;
+        margin-top: 16px;
+    }
     .fb-btn {
         transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease !important;
     }
@@ -273,7 +284,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                 <p style="color: #94a3b8; font-size: 14px; margin: 0 0 24px 0;">Wypełnij formularz &ndash; odpowiem najszybciej, jak to możliwe.</p>
                 
                 <div class="custom-form">
-                    <form action="https://formspree.io/f/xkjwnzvd" method="POST">
+                    <form id="contactForm" action="https://formspree.io/f/xkjwnzvd" method="POST">
                         <label>Twoje imię i nazwisko
                             <input type="text" name="name" required>
                         </label>
@@ -286,8 +297,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         <label>Twoja wiadomość (opcjonalne)
                             <textarea name="message" rows="5"></textarea>
                         </label>
-                        <button type="submit">Wyślij</button>
+                        <button type="submit" id="submitBtn">Wyślij</button>
                     </form>
+                    <div id="formSuccess" class="form-success-msg">
+                        Dziękuję! Twoja wiadomość została wysłana pomyślnie.
+                    </div>
                 </div>
             </div>
 
@@ -295,6 +309,42 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
     </section>
 </main>
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", async function(e) {
+        e.preventDefault();
+        const form = e.target;
+        const btn = document.getElementById("submitBtn");
+        const successMsg = document.getElementById("formSuccess");
+        
+        btn.disabled = true;
+        btn.textContent = "Wysyłanie...";
+
+        try {
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'json'
+                }
+            });
+
+            if (response.ok) {
+                form.reset();
+                form.style.display = "none";
+                successMsg.style.display = "block";
+            } else {
+                alert("Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie później.");
+                btn.disabled = false;
+                btn.textContent = "Wyślij";
+            }
+        } catch (error) {
+            alert("Błąd połączenia z serwerem.");
+            btn.disabled = false;
+            btn.textContent = "Wyślij";
+        }
+    });
+</script>
 
 <footer class="site-footer">
     <div class="footer-container">
