@@ -31,7 +31,7 @@ main,
 }
 
 .naglowek-strony {
-    background-color: darkslate-grey;
+    background-color: darkslategrey;
     border-bottom: 1px solid steelblue;
     padding: 16px 0;
 }
@@ -931,7 +931,7 @@ main,
 }
 
 .stopka-minimalna {
-    background: darkslate-grey;
+    background: darkslategrey;
     border-top: 1px solid steelblue;
     padding: 24px 0;
     margin-top: auto;
