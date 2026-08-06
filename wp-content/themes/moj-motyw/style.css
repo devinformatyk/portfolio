@@ -9,8 +9,8 @@ Version: 1.1
 }
 
 body {
-    background-color: #0b1120;
-    color: #94a3b8;
+    background-color: midnightblue;
+    color: slategray;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     display: flex;
@@ -19,24 +19,24 @@ body {
 }
 
 main,
-.site-main,
-.page-container {
+.glowna-tresc-strony,
+.kontener-strony {
     flex: 1;
     width: 100%;
     max-width: 1280px;
     margin: 40px auto;
     padding: 0 24px;
     box-sizing: border-box;
-    color: #f8fafc;
+    color: ghostwhite;
 }
 
-.site-header {
-    background-color: #0f172a;
-    border-bottom: 1px solid rgba(56, 189, 248, 0.1);
+.naglowek-strony {
+    background-color: darkslate-grey;
+    border-bottom: 1px solid steelblue;
     padding: 16px 0;
 }
 
-.header-container {
+.kontener-naglowka {
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
@@ -48,31 +48,31 @@ main,
     box-sizing: border-box;
 }
 
-.logo-box {
+.pudelko-logo {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(56, 189, 248, 0.2);
+    background: transparent;
+    border: 1px solid steelblue;
     padding: 10px 22px;
     border-radius: 14px;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
-.logo-box:hover {
-    border-color: rgba(56, 189, 248, 0.4);
-    background: rgba(255, 255, 255, 0.05);
+.pudelko-logo:hover {
+    border-color: deepskyblue;
+    background: darkslategrey;
 }
 
-.logo-box img {
+.pudelko-logo img {
     height: 80px;
     width: auto;
     display: block;
     filter: invert(1) brightness(1.2);
 }
 
-.main-navigation ul {
+.nawigacja-glowna ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -81,8 +81,8 @@ main,
     align-items: center;
 }
 
-.main-navigation a {
-    color: #94a3b8;
+.nawigacja-glowna a {
+    color: slategray;
     text-decoration: none;
     font-size: 15px;
     font-weight: 600;
@@ -93,38 +93,38 @@ main,
     position: relative;
 }
 
-.main-navigation a:after {
+.nawigacja-glowna a:after {
     content: '';
     position: absolute;
     width: 0;
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #38bdf8;
+    background-color: deepskyblue;
     transition: width 0.3s;
 }
 
-.main-navigation a:hover {
-    color: #ffffff;
+.nawigacja-glowna a:hover {
+    color: white;
 }
 
-.main-navigation a:hover:after,
-.main-navigation .current-menu-item a:after {
+.nawigacja-glowna a:hover:after,
+.nawigacja-glowna .element-aktualny a:after {
     width: 100%;
 }
 
-.main-navigation .current-menu-item a {
-    color: #38bdf8;
+.nawigacja-glowna .element-aktualny a {
+    color: deepskyblue;
 }
 
-.home-layout {
+.uklad-glowny {
     display: grid;
     grid-template-columns: 1fr 320px;
     gap: 40px;
     width: 100%;
 }
 
-.site-sidebar {
+.pasek-boczny {
     position: sticky;
     top: 20px;
     display: flex;
@@ -132,135 +132,135 @@ main,
     gap: 24px;
 }
 
-.sidebar-widget {
-    background: #1e293b;
-    border: 1px solid #334155;
+.element-paska-bocznego {
+    background: darkslategrey;
+    border: 1px solid steelblue;
     padding: 24px;
     border-radius: 12px;
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.sidebar-widget:has(.btn):hover {
+.element-paska-bocznego-interaktywny:hover {
     transform: translateY(-3px);
-    border-color: #38bdf8;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border-color: deepskyblue;
+    box-shadow: 0 8px 20px black;
 }
 
-.sidebar-widget h3 {
-    color: #f8fafc;
+.element-paska-bocznego h3 {
+    color: ghostwhite;
     font-size: 18px;
     margin-bottom: 15px;
-    border-left: 3px solid #38bdf8;
+    border-left: 3px solid deepskyblue;
     padding-left: 10px;
 }
 
-.sidebar-widget p {
+.element-paska-bocznego p {
     font-size: 14px;
-    color: #94a3b8;
+    color: slategray;
     margin-bottom: 15px;
 }
 
-.sidebar-widget ul {
+.element-paska-bocznego ul {
     list-style: none;
     padding: 0;
     font-size: 14px;
-    color: #cbd5e1;
+    color: lightgray;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.sidebar-widget .btn {
+.element-paska-bocznego .przycisk {
     width: 100%;
     text-align: center;
     margin-top: 15px;
     box-sizing: border-box;
 }
 
-.sidebar-status {
+.status-paska-bocznego {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #4ade80;
+    color: lightgreen;
     font-weight: 600;
     font-size: 14px;
     margin-bottom: 10px;
 }
 
-.sidebar-status .dot {
+.status-paska-bocznego .kropka {
     width: 10px;
     height: 10px;
-    background: #22c55e;
+    background: limegreen;
     border-radius: 50%;
-    box-shadow: 0 0 8px #22c55e;
+    box-shadow: 0 0 8px limegreen;
 }
 
-.section-title,
-.page-title {
+.tytul-sekcji,
+.tytul-strony {
     font-size: 28px;
-    color: #ffffff;
+    color: white;
     margin-bottom: 25px;
-    border-left: 4px solid #38bdf8;
+    border-left: 4px solid deepskyblue;
     padding-left: 14px;
     font-weight: 700;
 }
 
-.page-header {
+.naglowek-tresci {
     margin-bottom: 40px;
 }
 
-.page-header h1 {
-    color: #ffffff;
+.naglowek-tresci h1 {
+    color: white;
     font-size: 32px;
     font-weight: 700;
     padding-left: 16px;
-    border-left: 4px solid #38bdf8;
+    border-left: 4px solid deepskyblue;
     margin-bottom: 12px;
 }
 
-.page-header p {
-    color: #94a3b8;
+.naglowek-tresci p {
+    color: slategray;
     font-size: 16px;
     margin: 0;
     padding-left: 20px;
 }
 
-.services-section, 
-.process-section, 
-.projects-section, 
-.faq-section, 
-.tech-stack-section {
+.sekcja-uslugi, 
+.sekcja-proces, 
+.sekcja-projekty, 
+.sekcja-pytania, 
+.sekcja-technologie {
     margin-bottom: 60px;
 }
 
-.hero-box {
-    background: #1e293b;
+.pudelko-glowne {
+    background: darkslategrey;
     padding: 40px;
     border-radius: 12px;
-    border: 1px solid #334155;
+    border: 1px solid steelblue;
     margin-bottom: 40px;
     transition: border-color 0.3s ease;
 }
 
-.hero-box:hover {
-    border-color: #38bdf8;
+.pudelko-glowne:hover {
+    border-color: deepskyblue;
 }
 
-.hero-box h1 {
-    color: #38bdf8;
+.pudelko-glowne h1 {
+    color: deepskyblue;
     font-size: 32px;
     margin-bottom: 15px;
 }
 
-.hero-box p {
-    color: #cbd5e1;
+.pudelko-glowne p {
+    color: lightgray;
     font-size: 18px;
 }
 
-.btn {
+.przycisk {
     display: inline-block;
-    background-color: #38bdf8;
-    color: #0f172a;
+    background-color: deepskyblue;
+    color: darkblue;
     padding: 12px 24px;
     border-radius: 8px;
     text-decoration: none;
@@ -269,25 +269,25 @@ main,
     transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.btn:hover {
-    background-color: #0284c7;
-    color: #ffffff;
+.przycisk:hover {
+    background-color: dodgerblue;
+    color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+    box-shadow: 0 4px 12px steelblue;
 }
 
-.tech-grid {
+.siatka-technologii {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
 }
 
-.tech-card {
-    background: #1e293b;
-    border: 1px solid #334155;
+.karta-technologii {
+    background: darkslategrey;
+    border: 1px solid steelblue;
     padding: 12px 20px;
     border-radius: 8px;
-    color: #f1f5f9;
+    color: aliceblue;
     font-weight: 600;
     font-size: 14px;
     display: flex;
@@ -296,54 +296,54 @@ main,
     transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 
-.tech-card:hover {
+.karta-technologii:hover {
     transform: translateY(-3px);
-    border-color: #38bdf8;
-    background: #0f172a;
+    border-color: deepskyblue;
+    background: midnightblue;
 }
 
-.process-list {
+.lista-procesu {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
 }
 
-.process-item {
-    background: #1e293b;
-    border-left: 3px solid #38bdf8;
+.element-procesu {
+    background: darkslategrey;
+    border-left: 3px solid deepskyblue;
     padding: 20px 24px;
     border-radius: 0 12px 12px 0;
 }
 
-.process-item h3 {
-    color: #f1f5f9;
+.element-procesu h3 {
+    color: aliceblue;
     font-size: 17px;
     margin-bottom: 6px;
 }
 
-.process-item p {
-    color: #94a3b8;
+.element-procesu p {
+    color: slategray;
     font-size: 14px;
     margin: 0;
     line-height: 1.5;
 }
 
-.projects-grid {
+.siatka-projektow {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
 
-.project-card-link {
+.link-karty-projektu {
     text-decoration: none;
     color: inherit;
     display: flex;
 }
 
-.project-card {
-    background: #1e293b;
+.karta-projektu {
+    background: darkslategrey;
     border-radius: 12px;
-    border: 1px solid #334155;
+    border: 1px solid steelblue;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -351,29 +351,37 @@ main,
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.project-card-link .project-card:hover {
+.karta-projektu-interaktywna:hover {
     transform: translateY(-5px);
-    border-color: #38bdf8;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+    border-color: deepskyblue;
+    box-shadow: 0 12px 25px black;
 }
 
-.project-card.in-progress {
+.karta-projektu-interaktywna:hover .obrazek-projektu img {
+    transform: scale(1.03);
+}
+
+.karta-projektu-interaktywna:hover .link-projektu {
+    color: cornflowerblue;
+}
+
+.karta-projektu.w-trakcie {
     border-style: dashed;
     opacity: 0.95;
 }
 
-.project-image {
+.obrazek-projektu {
     height: 180px;
-    background: #ffffff;
+    background: white;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border-bottom: 1px solid #334155;
+    border-bottom: 1px solid steelblue;
     padding: 15px;
 }
 
-.project-image img {
+.obrazek-projektu img {
     max-width: 90%;
     max-height: 90%;
     object-fit: contain;
@@ -381,177 +389,169 @@ main,
     transition: transform 0.3s ease;
 }
 
-.project-card-link .project-card:hover .project-image img {
-    transform: scale(1.03);
-}
-
-.project-image-placeholder {
+.atrapa-obrazka-projektu {
     height: 180px;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    background: midnightblue;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #334155;
+    border-bottom: 1px solid steelblue;
     padding: 20px;
 }
 
-.placeholder-box {
+.pudelko-atrapy {
     width: 85%;
-    background: #0b1120;
-    border: 1px solid rgba(56, 189, 248, 0.2);
+    background: darkslategrey;
+    border: 1px solid steelblue;
     border-radius: 8px;
     padding: 12px;
 }
 
-.placeholder-dots {
+.kropki-atrapy {
     display: flex;
     gap: 6px;
     margin-bottom: 10px;
 }
 
-.placeholder-dots span {
+.kropki-atrapy span {
     width: 8px;
     height: 8px;
     border-radius: 50%;
 }
 
-.placeholder-dots span.dot-red { background: #ef4444; }
-.placeholder-dots span.dot-yellow { background: #f59e0b; }
-.placeholder-dots span.dot-green { background: #10b981; }
+.kropki-atrapy span.kropka-czerwona { background: crimson; }
+.kropki-atrapy span.kropka-zolta { background: gold; }
+.kropki-atrapy span.kropka-zielona { background: mediumseagreen; }
 
-.placeholder-text {
+.tekst-atrapy {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.placeholder-text code {
+.tekst-atrapy code {
     font-size: 11px;
-    color: #38bdf8;
+    color: deepskyblue;
     font-family: monospace;
 }
 
-.placeholder-text span {
+.tekst-atrapy span {
     font-size: 10px;
-    background: rgba(56, 189, 248, 0.1);
-    color: #38bdf8;
+    background: midnightblue;
+    color: deepskyblue;
     padding: 2px 6px;
     border-radius: 4px;
 }
 
-.project-content {
+.zawartosc-projektu {
     padding: 20px;
     display: flex;
     flex-direction: column;
     flex: 1;
 }
 
-.project-header {
+.naglowek-projektu {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 10px;
 }
 
-.project-header h3 {
-    color: #f1f5f9;
+.naglowek-projektu h3 {
+    color: aliceblue;
 }
 
-.project-badge {
+.odznaka-projektu {
     padding: 4px 10px;
     border-radius: 6px;
     font-size: 11px;
     font-weight: 600;
-    background: rgba(56, 189, 248, 0.15);
-    color: #38bdf8;
-    border: 1px solid rgba(56, 189, 248, 0.3);
+    background: midnightblue;
+    color: deepskyblue;
+    border: 1px solid steelblue;
     display: inline-block;
 }
 
-.project-badge.warning {
-    background: rgba(245, 158, 11, 0.15);
-    color: #f59e0b;
-    border-color: rgba(245, 158, 11, 0.3);
+.odznaka-projektu.ostrzezenie {
+    background: midnightblue;
+    color: orange;
+    border-color: darkorange;
 }
 
-.project-content p {
+.zawartosc-projektu p {
     flex: 1;
-    color: #94a3b8;
+    color: slategray;
 }
 
-.tech-tags {
+.tagi-technologii {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
     margin: 15px 0;
 }
 
-.tech-tags span {
+.tagi-technologii span {
     font-size: 11px;
-    background: #0f172a;
+    background: midnightblue;
     padding: 3px 8px;
     border-radius: 4px;
-    border: 1px solid #334155;
-    color: #38bdf8;
+    border: 1px solid steelblue;
+    color: deepskyblue;
 }
 
-.project-link {
-    color: #38bdf8;
+.link-projektu {
+    color: deepskyblue;
     font-weight: 600;
     font-size: 14px;
     margin-top: auto;
     transition: color 0.2s ease;
 }
 
-.project-card-link .project-card:hover .project-link {
-    color: #818cf8;
-}
-
-.project-status-text {
+.tekst-statusu-projektu {
     font-size: 13px;
-    color: #64748b;
+    color: gray;
     font-style: italic;
     margin-top: auto;
 }
 
-.faq-grid {
+.siatka-pytan {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
 }
 
-.faq-card {
-    background: #1e293b;
-    border: 1px solid #334155;
+.karta-pytania {
+    background: darkslategrey;
+    border: 1px solid steelblue;
     border-radius: 12px;
     padding: 24px;
 }
 
-.faq-card h3 {
-    color: #f1f5f9;
+.karta-pytania h3 {
+    color: aliceblue;
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-.faq-card p {
-    color: #94a3b8;
+.karta-pytania p {
+    color: slategray;
     font-size: 14px;
     line-height: 1.6;
     margin: 0;
 }
 
-.about-grid {
+.siatka-o-mnie {
     display: grid;
     grid-template-columns: 320px 1fr;
     gap: 32px;
     margin-bottom: 60px;
 }
 
-.about-sidebar-card {
-    background: #1e293b;
-    border: 1px solid rgba(56, 189, 248, 0.2);
+.karta-boczna-o-mnie {
+    background: darkslategrey;
+    border: 1px solid steelblue;
     border-radius: 16px;
     padding: 28px;
     text-align: center;
@@ -560,68 +560,68 @@ main,
     align-items: center;
 }
 
-.profile-img-box {
+.pudelko-zdjecia-profilowego {
     width: 160px;
     height: 160px;
     border-radius: 50%;
-    border: 3px solid #38bdf8;
+    border: 3px solid deepskyblue;
     overflow: hidden;
     margin-bottom: 20px;
-    background: #0f172a;
+    background: midnightblue;
     transition: transform 0.3s ease;
 }
 
-.profile-img-box:hover {
+.pudelko-zdjecia-profilowego:hover {
     transform: scale(1.02);
 }
 
-.profile-img-box img {
+.pudelko-zdjecia-profilowego img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.about-sidebar-card h3 {
-    color: #ffffff;
+.karta-boczna-o-mnie h3 {
+    color: white;
     font-size: 20px;
     font-weight: 700;
     margin: 0 0 4px 0;
 }
 
-.about-sidebar-card .role {
-    color: #38bdf8;
+.karta-boczna-o-mnie .rola {
+    color: deepskyblue;
     font-size: 14px;
     font-weight: 600;
     display: block;
     margin-bottom: 16px;
 }
 
-.about-sidebar-card .bio {
-    color: #94a3b8;
+.karta-boczna-o-mnie .opis-biograficzny {
+    color: slategray;
     font-size: 13px;
     line-height: 1.5;
     margin: 0 0 20px 0;
 }
 
-.meta-details {
+.szczegoly-informacyjne {
     width: 100%;
-    border-top: 1px solid #334155;
+    border-top: 1px solid steelblue;
     padding-top: 16px;
     display: flex;
     flex-direction: column;
     gap: 8px;
     text-align: left;
     font-size: 13px;
-    color: #cbd5e1;
+    color: lightgray;
 }
 
-.meta-details strong {
-    color: #38bdf8;
+.szczegoly-informacyjne strong {
+    color: deepskyblue;
 }
 
-.about-main-card {
-    background: #1e293b;
-    border: 1px solid rgba(56, 189, 248, 0.2);
+.karta-glowna-o-mnie {
+    background: darkslategrey;
+    border: 1px solid steelblue;
     border-radius: 16px;
     padding: 36px;
     display: flex;
@@ -629,210 +629,210 @@ main,
     justify-content: space-between;
 }
 
-.about-main-card h2 {
-    color: #ffffff;
+.karta-glowna-o-mnie h2 {
+    color: white;
     font-size: 24px;
     font-weight: 700;
     margin: 0 0 20px 0;
     padding-left: 14px;
-    border-left: 4px solid #38bdf8;
+    border-left: 4px solid deepskyblue;
     line-height: 1.3;
 }
 
-.about-main-card p {
-    color: #94a3b8;
+.karta-glowna-o-mnie p {
+    color: slategray;
     font-size: 15px;
     line-height: 1.7;
     margin-bottom: 16px;
 }
 
-.about-main-card p:last-child {
+.karta-glowna-o-mnie p:last-child {
     margin-bottom: 0;
 }
 
-.cta-banner {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    border: 1px solid rgba(56, 189, 248, 0.3);
+.baner-wezwania-do-dzialania {
+    background: darkslategrey;
+    border: 1px solid steelblue;
     border-radius: 16px;
     padding: 40px;
     text-align: center;
 }
 
-.cta-banner h2 {
-    color: #ffffff;
+.baner-wezwania-do-dzialania h2 {
+    color: white;
     font-size: 24px;
     font-weight: 700;
     margin: 0 0 12px 0;
 }
 
-.cta-banner p {
-    color: #94a3b8;
+.baner-wezwania-do-dzialania p {
+    color: slategray;
     font-size: 15px;
     max-width: 600px;
     margin: 0 auto 24px auto;
 }
 
-.services-grid {
+.siatka-uslug {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     margin-bottom: 60px;
 }
 
-.service-card {
-    background: #1e293b;
-    border: 1px solid rgba(56, 189, 248, 0.2);
+.karta-uslugi {
+    background: darkslategrey;
+    border: 1px solid steelblue;
     border-radius: 16px;
     padding: 32px;
     display: flex;
     flex-direction: column;
 }
 
-.service-card h3 {
-    color: #ffffff;
+.karta-uslugi h3 {
+    color: white;
     font-size: 20px;
     font-weight: 700;
     margin: 0 0 12px 0;
 }
 
-.service-card p {
-    color: #94a3b8;
+.karta-uslugi p {
+    color: slategray;
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
-.pricing-section {
-    background: #1e293b;
-    border: 1px solid rgba(56, 189, 248, 0.15);
+.sekcja-cennika {
+    background: darkslategrey;
+    border: 1px solid steelblue;
     border-radius: 16px;
     padding: 32px;
     margin-bottom: 40px;
 }
 
-.pricing-section h2 {
-    color: #ffffff;
+.sekcja-cennika h2 {
+    color: white;
     font-size: 22px;
     font-weight: 700;
     margin: 0 0 24px 0;
     text-align: center;
 }
 
-.pricing-grid {
+.siatka-cennika {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     text-align: center;
 }
 
-.pricing-card {
-    background: #0f172a;
+.karta-cennika {
+    background: midnightblue;
     padding: 24px;
     border-radius: 12px;
-    border: 1px solid #334155;
+    border: 1px solid steelblue;
 }
 
-.pricing-card.featured {
-    border-color: rgba(56, 189, 248, 0.3);
+.karta-cennika.wyrozniona {
+    border-color: deepskyblue;
 }
 
-.pricing-card h4 {
-    color: #94a3b8;
+.karta-cennika h4 {
+    color: slategray;
     margin: 0 0 8px 0;
     font-size: 14px;
 }
 
-.pricing-card .price {
-    color: #38bdf8;
+.karta-cennika .cena {
+    color: deepskyblue;
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 6px;
 }
 
-.pricing-card span {
-    color: #64748b;
+.karta-cennika span {
+    color: gray;
     font-size: 12px;
 }
 
-.billing-info {
-    background: rgba(15, 23, 42, 0.4);
-    border: 1px dashed rgba(56, 189, 248, 0.25);
+.informacje-rozliczeniowe {
+    background: midnightblue;
+    border: 1px dashed steelblue;
     border-radius: 12px;
     padding: 16px 24px;
     margin-bottom: 60px;
 }
 
-.billing-info p {
-    color: #94a3b8;
+.informacje-rozliczeniowe p {
+    color: slategray;
     font-size: 13px;
     margin: 0;
     line-height: 1.5;
     text-align: center;
 }
 
-.contact-grid {
+.siatka-kontaktu {
     display: grid;
     grid-template-columns: 380px 1fr;
     gap: 32px;
     margin-bottom: 60px;
 }
 
-.contact-info-column {
+.kolumna-informacji-kontaktowych {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-.contact-card {
-    background: #1e293b;
-    border: 1px solid rgba(56, 189, 248, 0.2);
+.karta-kontaktowa {
+    background: darkslategrey;
+    border: 1px solid steelblue;
     border-radius: 16px;
     padding: 28px;
 }
 
-.status-badge {
+.odznaka-statusu {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 12px;
 }
 
-.status-badge .dot-green {
+.odznaka-statusu .kropka-zielona {
     width: 10px;
     height: 10px;
-    background: #10b981;
+    background: mediumseagreen;
     border-radius: 50%;
     display: inline-block;
 }
 
-.status-badge span {
-    color: #10b981;
+.odznaka-statusu span {
+    color: mediumseagreen;
     font-weight: 700;
     font-size: 14px;
 }
 
-.contact-card h3 {
-    color: #ffffff;
+.karta-kontaktowa h3 {
+    color: white;
     font-size: 18px;
     font-weight: 700;
     margin: 0 0 8px 0;
 }
 
-.contact-card p {
-    color: #94a3b8;
+.karta-kontaktowa p {
+    color: slategray;
     font-size: 13px;
     line-height: 1.5;
     margin: 0 0 16px 0;
 }
 
-.fb-btn {
+.przycisk-facebook {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background: rgba(24, 119, 242, 0.1);
-    border: 1px solid rgba(24, 119, 242, 0.4);
-    color: #38bdf8;
+    background: midnightblue;
+    border: 1px solid steelblue;
+    color: deepskyblue;
     font-weight: 600;
     padding: 12px 20px;
     border-radius: 8px;
@@ -840,9 +840,9 @@ main,
     font-size: 14px;
 }
 
-.contact-form-card {
-    background: #1e293b;
-    border: 1px solid rgba(56, 189, 248, 0.2);
+.karta-formularza-kontaktowego {
+    background: darkslategrey;
+    border: 1px solid steelblue;
     border-radius: 16px;
     padding: 36px;
     display: flex;
@@ -850,20 +850,20 @@ main,
     justify-content: center;
 }
 
-.contact-form-card h3 {
-    color: #ffffff;
+.karta-formularza-kontaktowego h3 {
+    color: white;
     font-size: 22px;
     font-weight: 700;
     margin: 0 0 8px 0;
 }
 
-.contact-form-card p {
-    color: #94a3b8;
+.karta-formularza-kontaktowego p {
+    color: slategray;
     font-size: 14px;
     margin: 0 0 24px 0;
 }
 
-.custom-form form {
+.wlasny-formularz form {
     background: transparent;
     border: none;
     padding: 0;
@@ -871,22 +871,22 @@ main,
     gap: 0;
 }
 
-.custom-form label {
-    color: #cbd5e1;
+.wlasny-formularz label {
+    color: lightgray;
     font-size: 13px;
     font-weight: 600;
     display: block;
 }
 
-.custom-form input[type="text"],
-.custom-form input[type="email"],
-.custom-form textarea {
+.wlasny-formularz input[type="text"],
+.wlasny-formularz input[type="email"],
+.wlasny-formularz textarea {
     width: 100%;
-    background: #0f172a;
-    border: 1px solid #334155;
+    background: midnightblue;
+    border: 1px solid steelblue;
     border-radius: 8px;
     padding: 12px 16px;
-    color: #ffffff;
+    color: white;
     font-size: 14px;
     outline: none;
     box-sizing: border-box;
@@ -895,14 +895,14 @@ main,
     transition: border-color 0.2s ease;
 }
 
-.custom-form input:focus,
-.custom-form textarea:focus {
-    border-color: #38bdf8;
+.wlasny-formularz input:focus,
+.wlasny-formularz textarea:focus {
+    border-color: deepskyblue;
 }
 
-.custom-form button[type="submit"] {
-    background: #38bdf8;
-    color: #0f172a;
+.wlasny-formularz button[type="submit"] {
+    background: deepskyblue;
+    color: darkblue;
     font-weight: 700;
     border: none;
     padding: 14px 24px;
@@ -913,16 +913,16 @@ main,
     align-self: auto;
 }
 
-.custom-form button[type="submit"]:hover {
-    background: #0284c7;
-    color: #ffffff;
+.wlasny-formularz button[type="submit"]:hover {
+    background: dodgerblue;
+    color: white;
 }
 
-.form-success-msg {
+.komunikat-sukcesu-formularza {
     display: none;
-    background: rgba(16, 185, 129, 0.1);
-    border: 1px solid #10b981;
-    color: #10b981;
+    background: midnightblue;
+    border: 1px solid mediumseagreen;
+    color: mediumseagreen;
     padding: 14px;
     border-radius: 8px;
     text-align: center;
@@ -930,14 +930,14 @@ main,
     margin-top: 16px;
 }
 
-.minimal-footer {
-    background: #0f172a;
-    border-top: 1px solid #1e293b;
+.stopka-minimalna {
+    background: darkslate-grey;
+    border-top: 1px solid steelblue;
     padding: 24px 0;
     margin-top: auto;
 }
 
-.footer-flex {
+.elastyczna-stopka {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 24px;
@@ -945,54 +945,54 @@ main,
     justify-content: space-between;
     align-items: center;
     font-size: 14px;
-    color: #64748b;
+    color: gray;
 }
 
-.footer-flex a {
-    color: #94a3b8;
+.elastyczna-stopka a {
+    color: slategray;
     text-decoration: none;
     margin-left: 20px;
     transition: color 0.2s;
 }
 
-.footer-flex a:hover {
-    color: #38bdf8;
+.elastyczna-stopka a:hover {
+    color: deepskyblue;
 }
 
 @media (max-width: 1024px) {
-    .home-layout,
-    .about-grid,
-    .contact-grid {
+    .uklad-glowny,
+    .siatka-o-mnie,
+    .siatka-kontaktu {
         grid-template-columns: 1fr;
     }
 
-    .services-grid,
-    .pricing-grid {
+    .siatka-uslug,
+    .siatka-cennika {
         grid-template-columns: 1fr;
     }
 
-    .site-sidebar {
+    .pasek-boczny {
         position: static;
     }
 
-    .projects-grid {
+    .siatka-projektow {
         grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 900px) {
-    .process-list,
-    .faq-grid {
+    .lista-procesu,
+    .siatka-pytan {
         grid-template-columns: 1fr;
     }
 
-    .footer-flex {
+    .elastyczna-stopka {
         flex-direction: column;
         gap: 12px;
         text-align: center;
     }
 
-    .footer-flex a {
+    .elastyczna-stopka a {
         margin: 0 10px;
     }
 }
