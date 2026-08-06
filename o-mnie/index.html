@@ -6,81 +6,6 @@
     <link rel="icon" href="https://kmiepaw08-bot.github.io/portfolio/wp-content/themes/moj-motyw/favicon-512x512.png" type="image/png">
     <title>O mnie &ndash; Paweł Kmiecik</title>
     <link rel="stylesheet" id="moj-motyw-style-css" href="https://kmiepaw08-bot.github.io/portfolio/wp-content/themes/moj-motyw/style.css?ver=7.0.2" media="all">
-    <style>
-        .site-header {
-            background-color: #0f172a;
-            border-bottom: 1px solid rgba(56, 189, 248, 0.1);
-            padding: 16px 0;
-        }
-        .header-container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            box-sizing: border-box;
-        }
-        .logo-box {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(56, 189, 248, 0.2);
-            padding: 10px 22px;
-            border-radius: 14px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        .logo-box:hover {
-            border-color: rgba(56, 189, 248, 0.4);
-            background: rgba(255, 255, 255, 0.05);
-        }
-        .logo-box img {
-            height: 100px;
-            width: auto;
-            display: block;
-            filter: invert(1) brightness(1.2);
-            transform: scale(1.15);
-        }
-        .main-navigation ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 28px;
-            align-items: center;
-        }
-        .main-navigation a {
-            color: #94a3b8;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            transition: all 0.2s ease;
-            padding: 6px 0;
-            position: relative;
-        }
-        .main-navigation a:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: #38bdf8;
-            transition: width 0.3s;
-        }
-        .main-navigation a:hover { color: #ffffff; }
-        .main-navigation a:hover:after,
-        .main-navigation .current-menu-item a:after { width: 100%; }
-        .main-navigation .current-menu-item a { color: #38bdf8; }
-        .profile-img-box { transition: transform 0.3s ease; }
-        .profile-img-box:hover { transform: scale(1.02); }
-    </style>
 </head>
 <body class="wp-singular page-template-page-o-mnie page wp-theme-moj-motyw">
 
@@ -100,91 +25,72 @@
     </div>
 </header>
 
-<main style="max-width: 1440px; margin: 40px auto; padding: 0 24px;">
+<main>
     <section class="about-page">
-        <div style="margin-bottom: 40px;">
-            <h1 style="color: #ffffff; font-size: 32px; font-weight: 700; padding-left: 16px; border-left: 4px solid #38bdf8; margin-bottom: 12px;">
-                O mnie
-            </h1>
-            <p style="color: #94a3b8; font-size: 16px; margin: 0; padding-left: 20px;">
-                Czym się zajmuję i w jaki sposób realizuję projekty.
-            </p>
+        <div class="page-header">
+            <h1>O mnie</h1>
+            <p>Czym się zajmuję i w jaki sposób realizuję projekty.</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: 320px 1fr; gap: 32px; margin-bottom: 60px;">
-            <div style="background: #1e293b; border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 16px; padding: 28px; text-align: center; display: flex; flex-direction: column; align-items: center;">
-                <div class="profile-img-box" style="width: 160px; height: 160px; border-radius: 50%; border: 3px solid #38bdf8; overflow: hidden; margin-bottom: 20px; background: #0f172a;">
-                    <img src="https://kmiepaw08-bot.github.io/portfolio/wp-content/uploads/2026/08/ja.jpeg" alt="Paweł Kmiecik" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="about-grid">
+            <div class="about-sidebar-card">
+                <div class="profile-img-box">
+                    <img src="https://kmiepaw08-bot.github.io/portfolio/wp-content/uploads/2026/08/ja.jpeg" alt="Paweł Kmiecik">
                 </div>
-                <h3 style="color: #ffffff; font-size: 20px; font-weight: 700; margin: 0 0 4px 0;">Paweł Kmiecik</h3>
-                <span style="color: #38bdf8; font-size: 14px; font-weight: 600; display: block; margin-bottom: 16px;">Web Developer</span>
-                <p style="color: #94a3b8; font-size: 13px; line-height: 1.5; margin: 0 0 20px 0;">
+                <h3>Paweł Kmiecik</h3>
+                <span class="role">Web Developer</span>
+                <p class="bio">
                     Tworzę strony internetowe z wykorzystaniem PHP, JavaScriptu oraz MySQL.
                 </p>
-                <div style="width: 100%; border-top: 1px solid #334155; padding-top: 16px; display: flex; flex-direction: column; gap: 8px; text-align: left; font-size: 13px;">
-                    <div style="color: #cbd5e1;"><strong style="color: #38bdf8;">Lokalizacja:</strong> Ostrów Wielkopolski i okolice</div>
-                    <div style="color: #cbd5e1;"><strong style="color: #38bdf8;">Główne technologie:</strong> HTML, CSS, JS, PHP, MySQL</div>
-                    <div style="color: #cbd5e1;"><strong style="color: #38bdf8;">Faktura:</strong> VAT (przez Useme)</div>
+                <div class="meta-details">
+                    <div><strong>Lokalizacja:</strong> Ostrów Wielkopolski i okolice</div>
+                    <div><strong>Główne technologie:</strong> HTML, CSS, JS, PHP, MySQL</div>
+                    <div><strong>Faktura:</strong> VAT (przez Useme)</div>
                 </div>
             </div>
 
-            <div style="background: #1e293b; border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 16px; padding: 36px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="about-main-card">
                 <div>
-                    <h2 style="color: #ffffff; font-size: 24px; font-weight: 700; margin: 0 0 20px 0; padding-left: 14px; border-left: 4px solid #38bdf8; line-height: 1.3;">
-                        Praktyczne podejście do kodowania
-                    </h2>
+                    <h2>Praktyczne podejście do kodowania</h2>
                     
-                    <p style="color: #94a3b8; font-size: 15px; line-height: 1.7; margin-bottom: 16px;">
-                        Nazywam się Paweł Kmiecik. Uczę się na kierunku technik informatyk w Ostrowie Wielkopolskim, jednak największą część wiedzy zdobywam podczas samodzielnego uczenia się i realizowania konkretnych projektów. 
+                    <p>
+                        Nazywam się Paweł Kmiecik. Uczę się na kierunku technik informatyk w Ostrowie Wielkopolskim, jednak największą część wiedzy zdobywam podczas samodzielnego uczenia się i realizowania konkretnych projektów.
                     </p>
 
-                    <p style="color: #94a3b8; font-size: 15px; line-height: 1.7; margin-bottom: 16px;">
+                    <p>
                         W codziennej pracy stawiam na pisanie czystego kodu od zera. Wizualną część stron buduję w oparciu o semantyczny HTML5 i dopracowany CSS3 z użyciem JavaScriptu tam, gdzie potrzebna jest dynamiczna interakcja. Od strony backendu projektuję zaplecza w PHP oraz dedykowane relacyjne bazy danych MySQL (np. pod systemy logowania, formularze czy panele zarządzania).
                     </p>
 
-                    <p style="color: #94a3b8; font-size: 15px; line-height: 1.7; margin-bottom: 16px;">
+                    <p>
                         Do wsparcia procesu deweloperskiego wykorzystuję nowoczesne narzędzia programistyczne i asystentów AI – pomaga mi to szybciej wyszukiwać błędy w kodzie, refaktoryzować skrypty i skupić się na architekturze całego projektu.
                     </p>
 
-                    <p style="color: #94a3b8; font-size: 15px; line-height: 1.7; margin: 0;">
+                    <p>
                         Moim celem jest dostarczanie stron i aplikacji, które ładują się szybko, są proste w utrzymaniu i nie wymagają ciągłego nienaturalnego obciążania serwera.
                     </p>
                 </div>
             </div>
         </div>
 
-        <div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 16px; padding: 40px; text-align: center;">
-            <h2 style="color: #ffffff; font-size: 24px; font-weight: 700; margin: 0 0 12px 0;">Chcesz omówić projekt?</h2>
-            <p style="color: #94a3b8; font-size: 15px; max-width: 600px; margin: 0 auto 24px auto;">
-                Wyślij krótką wiadomość przez formularz kontaktowy.
-            </p>
-            <a href="https://kmiepaw08-bot.github.io/portfolio/kontakt" style="display: inline-block; background: #38bdf8; color: #0f172a; font-weight: 700; padding: 14px 32px; border-radius: 8px; text-decoration: none;">
+        <div class="cta-banner">
+            <h2>Chcesz omówić projekt?</h2>
+            <p>Wyślij krótką wiadomość przez formularz kontaktowy.</p>
+            <a href="https://kmiepaw08-bot.github.io/portfolio/kontakt" class="btn">
                 Przejdź do formularza &rarr;
             </a>
         </div>
     </section>
 </main>
 
-<footer class="site-footer">
-    <div class="footer-container">
-        <div class="footer-info">
-            <h3>Dev<span>Informatyk</span></h3>
-            <p>Strony internetowe, skrypty PHP i obsługa baz danych MySQL.</p>
+<footer class="minimal-footer">
+    <div class="footer-flex">
+        <div>&copy; 2026 Paweł Kmiecik. Kodowane w czystym PHP &amp; CSS.</div>
+        <div>
+            <a href="https://kmiepaw08-bot.github.io/portfolio/">Strona Główna</a>
+            <a href="https://kmiepaw08-bot.github.io/portfolio/uslugi/">Usługi</a>
+            <a href="https://kmiepaw08-bot.github.io/portfolio/o-mnie/">O mnie</a>
+            <a href="https://kmiepaw08-bot.github.io/portfolio/kontakt/">Kontakt</a>
         </div>
-        <div class="footer-links">
-            <h4>Nawigacja</h4>
-            <div class="menu">
-                <ul>
-                    <li><a href="https://kmiepaw08-bot.github.io/portfolio/kontakt/">Kontakt</a></li>
-                    <li><a href="https://kmiepaw08-bot.github.io/portfolio/o-mnie/">O mnie</a></li>
-                    <li><a href="https://kmiepaw08-bot.github.io/portfolio/">Strona Główna</a></li>
-                    <li><a href="https://kmiepaw08-bot.github.io/portfolio/uslugi/">Usługi</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2026 DevInformatyk. Autorski kod PHP &amp; CSS.</p>
     </div>
 </footer>
 
