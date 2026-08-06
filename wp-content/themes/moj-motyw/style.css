@@ -9,8 +9,8 @@ Version: 1.1
 }
 
 body {
-    background-color: midnightblue;
-    color: slategray;
+    background-color: #0b1120;
+    color: #94a3b8;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     display: flex;
@@ -27,12 +27,12 @@ main,
     margin: 40px auto;
     padding: 0 24px;
     box-sizing: border-box;
-    color: ghostwhite;
+    color: #f8fafc;
 }
 
 .naglowek-strony {
-    background-color: darkslategrey;
-    border-bottom: 1px solid steelblue;
+    background-color: #0f172a;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.1);
     padding: 16px 0;
 }
 
@@ -52,8 +52,8 @@ main,
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: transparent;
-    border: 1px solid steelblue;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(56, 189, 248, 0.2);
     padding: 10px 22px;
     border-radius: 14px;
     text-decoration: none;
@@ -61,8 +61,8 @@ main,
 }
 
 .pudelko-logo:hover {
-    border-color: deepskyblue;
-    background: darkslategrey;
+    border-color: rgba(56, 189, 248, 0.4);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .pudelko-logo img {
@@ -82,7 +82,7 @@ main,
 }
 
 .nawigacja-glowna a {
-    color: slategray;
+    color: #94a3b8;
     text-decoration: none;
     font-size: 15px;
     font-weight: 600;
@@ -100,12 +100,12 @@ main,
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: deepskyblue;
+    background-color: #38bdf8;
     transition: width 0.3s;
 }
 
 .nawigacja-glowna a:hover {
-    color: white;
+    color: #ffffff;
 }
 
 .nawigacja-glowna a:hover:after,
@@ -114,7 +114,7 @@ main,
 }
 
 .nawigacja-glowna .element-aktualny a {
-    color: deepskyblue;
+    color: #38bdf8;
 }
 
 .uklad-glowny {
@@ -133,8 +133,8 @@ main,
 }
 
 .element-paska-bocznego {
-    background: darkslategrey;
-    border: 1px solid steelblue;
+    background: #1e293b;
+    border: 1px solid #334155;
     padding: 24px;
     border-radius: 12px;
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
@@ -142,21 +142,21 @@ main,
 
 .element-paska-bocznego-interaktywny:hover {
     transform: translateY(-3px);
-    border-color: deepskyblue;
-    box-shadow: 0 8px 20px black;
+    border-color: #38bdf8;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .element-paska-bocznego h3 {
-    color: ghostwhite;
+    color: #f8fafc;
     font-size: 18px;
     margin-bottom: 15px;
-    border-left: 3px solid deepskyblue;
+    border-left: 3px solid #38bdf8;
     padding-left: 10px;
 }
 
 .element-paska-bocznego p {
     font-size: 14px;
-    color: slategray;
+    color: #94a3b8;
     margin-bottom: 15px;
 }
 
@@ -164,7 +164,7 @@ main,
     list-style: none;
     padding: 0;
     font-size: 14px;
-    color: lightgray;
+    color: #cbd5e1;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -181,7 +181,7 @@ main,
     display: flex;
     align-items: center;
     gap: 10px;
-    color: lightgreen;
+    color: #4ade80;
     font-weight: 600;
     font-size: 14px;
     margin-bottom: 10px;
@@ -190,17 +190,17 @@ main,
 .status-paska-bocznego .kropka {
     width: 10px;
     height: 10px;
-    background: limegreen;
+    background: #22c55e;
     border-radius: 50%;
-    box-shadow: 0 0 8px limegreen;
+    box-shadow: 0 0 8px #22c55e;
 }
 
 .tytul-sekcji,
 .tytul-strony {
     font-size: 28px;
-    color: white;
+    color: #ffffff;
     margin-bottom: 25px;
-    border-left: 4px solid deepskyblue;
+    border-left: 4px solid #38bdf8;
     padding-left: 14px;
     font-weight: 700;
 }
@@ -210,16 +210,16 @@ main,
 }
 
 .naglowek-tresci h1 {
-    color: white;
+    color: #ffffff;
     font-size: 32px;
     font-weight: 700;
     padding-left: 16px;
-    border-left: 4px solid deepskyblue;
+    border-left: 4px solid #38bdf8;
     margin-bottom: 12px;
 }
 
 .naglowek-tresci p {
-    color: slategray;
+    color: #94a3b8;
     font-size: 16px;
     margin: 0;
     padding-left: 20px;
@@ -234,33 +234,33 @@ main,
 }
 
 .pudelko-glowne {
-    background: darkslategrey;
+    background: #1e293b;
     padding: 40px;
     border-radius: 12px;
-    border: 1px solid steelblue;
+    border: 1px solid #334155;
     margin-bottom: 40px;
     transition: border-color 0.3s ease;
 }
 
 .pudelko-glowne:hover {
-    border-color: deepskyblue;
+    border-color: #38bdf8;
 }
 
 .pudelko-glowne h1 {
-    color: deepskyblue;
+    color: #38bdf8;
     font-size: 32px;
     margin-bottom: 15px;
 }
 
 .pudelko-glowne p {
-    color: lightgray;
+    color: #cbd5e1;
     font-size: 18px;
 }
 
 .przycisk {
     display: inline-block;
-    background-color: deepskyblue;
-    color: darkblue;
+    background-color: #38bdf8;
+    color: #0f172a;
     padding: 12px 24px;
     border-radius: 8px;
     text-decoration: none;
@@ -270,10 +270,10 @@ main,
 }
 
 .przycisk:hover {
-    background-color: dodgerblue;
-    color: white;
+    background-color: #0284c7;
+    color: #ffffff;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px steelblue;
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
 }
 
 .siatka-technologii {
@@ -283,11 +283,11 @@ main,
 }
 
 .karta-technologii {
-    background: darkslategrey;
-    border: 1px solid steelblue;
+    background: #1e293b;
+    border: 1px solid #334155;
     padding: 12px 20px;
     border-radius: 8px;
-    color: aliceblue;
+    color: #f1f5f9;
     font-weight: 600;
     font-size: 14px;
     display: flex;
@@ -298,8 +298,8 @@ main,
 
 .karta-technologii:hover {
     transform: translateY(-3px);
-    border-color: deepskyblue;
-    background: midnightblue;
+    border-color: #38bdf8;
+    background: #0f172a;
 }
 
 .lista-procesu {
@@ -309,20 +309,20 @@ main,
 }
 
 .element-procesu {
-    background: darkslategrey;
-    border-left: 3px solid deepskyblue;
+    background: #1e293b;
+    border-left: 3px solid #38bdf8;
     padding: 20px 24px;
     border-radius: 0 12px 12px 0;
 }
 
 .element-procesu h3 {
-    color: aliceblue;
+    color: #f1f5f9;
     font-size: 17px;
     margin-bottom: 6px;
 }
 
 .element-procesu p {
-    color: slategray;
+    color: #94a3b8;
     font-size: 14px;
     margin: 0;
     line-height: 1.5;
@@ -341,9 +341,9 @@ main,
 }
 
 .karta-projektu {
-    background: darkslategrey;
+    background: #1e293b;
     border-radius: 12px;
-    border: 1px solid steelblue;
+    border: 1px solid #334155;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -353,8 +353,8 @@ main,
 
 .karta-projektu-interaktywna:hover {
     transform: translateY(-5px);
-    border-color: deepskyblue;
-    box-shadow: 0 12px 25px black;
+    border-color: #38bdf8;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
 }
 
 .karta-projektu-interaktywna:hover .obrazek-projektu img {
@@ -362,7 +362,7 @@ main,
 }
 
 .karta-projektu-interaktywna:hover .link-projektu {
-    color: cornflowerblue;
+    color: #818cf8;
 }
 
 .karta-projektu.w-trakcie {
@@ -372,12 +372,12 @@ main,
 
 .obrazek-projektu {
     height: 180px;
-    background: white;
+    background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border-bottom: 1px solid steelblue;
+    border-bottom: 1px solid #334155;
     padding: 15px;
 }
 
@@ -391,19 +391,19 @@ main,
 
 .atrapa-obrazka-projektu {
     height: 180px;
-    background: midnightblue;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid steelblue;
+    border-bottom: 1px solid #334155;
     padding: 20px;
 }
 
 .pudelko-atrapy {
     width: 85%;
-    background: darkslategrey;
-    border: 1px solid steelblue;
+    background: #0b1120;
+    border: 1px solid rgba(56, 189, 248, 0.2);
     border-radius: 8px;
     padding: 12px;
 }
@@ -420,9 +420,9 @@ main,
     border-radius: 50%;
 }
 
-.kropki-atrapy span.kropka-czerwona { background: crimson; }
-.kropki-atrapy span.kropka-zolta { background: gold; }
-.kropki-atrapy span.kropka-zielona { background: mediumseagreen; }
+.kropki-atrapy span.kropka-czerwona { background: #ef4444; }
+.kropki-atrapy span.kropka-zolta { background: #f59e0b; }
+.kropki-atrapy span.kropka-zielona { background: #10b981; }
 
 .tekst-atrapy {
     display: flex;
@@ -432,14 +432,14 @@ main,
 
 .tekst-atrapy code {
     font-size: 11px;
-    color: deepskyblue;
+    color: #38bdf8;
     font-family: monospace;
 }
 
 .tekst-atrapy span {
     font-size: 10px;
-    background: midnightblue;
-    color: deepskyblue;
+    background: rgba(56, 189, 248, 0.1);
+    color: #38bdf8;
     padding: 2px 6px;
     border-radius: 4px;
 }
@@ -459,7 +459,7 @@ main,
 }
 
 .naglowek-projektu h3 {
-    color: aliceblue;
+    color: #f1f5f9;
 }
 
 .odznaka-projektu {
@@ -467,21 +467,21 @@ main,
     border-radius: 6px;
     font-size: 11px;
     font-weight: 600;
-    background: midnightblue;
-    color: deepskyblue;
-    border: 1px solid steelblue;
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
     display: inline-block;
 }
 
 .odznaka-projektu.ostrzezenie {
-    background: midnightblue;
-    color: orange;
-    border-color: darkorange;
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border-color: rgba(245, 158, 11, 0.3);
 }
 
 .zawartosc-projektu p {
     flex: 1;
-    color: slategray;
+    color: #94a3b8;
 }
 
 .tagi-technologii {
@@ -493,15 +493,15 @@ main,
 
 .tagi-technologii span {
     font-size: 11px;
-    background: midnightblue;
+    background: #0f172a;
     padding: 3px 8px;
     border-radius: 4px;
-    border: 1px solid steelblue;
-    color: deepskyblue;
+    border: 1px solid #334155;
+    color: #38bdf8;
 }
 
 .link-projektu {
-    color: deepskyblue;
+    color: #38bdf8;
     font-weight: 600;
     font-size: 14px;
     margin-top: auto;
@@ -510,7 +510,7 @@ main,
 
 .tekst-statusu-projektu {
     font-size: 13px;
-    color: gray;
+    color: #64748b;
     font-style: italic;
     margin-top: auto;
 }
@@ -522,21 +522,21 @@ main,
 }
 
 .karta-pytania {
-    background: darkslategrey;
-    border: 1px solid steelblue;
+    background: #1e293b;
+    border: 1px solid #334155;
     border-radius: 12px;
     padding: 24px;
 }
 
 .karta-pytania h3 {
-    color: aliceblue;
+    color: #f1f5f9;
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
 .karta-pytania p {
-    color: slategray;
+    color: #94a3b8;
     font-size: 14px;
     line-height: 1.6;
     margin: 0;
@@ -550,8 +550,8 @@ main,
 }
 
 .karta-boczna-o-mnie {
-    background: darkslategrey;
-    border: 1px solid steelblue;
+    background: #1e293b;
+    border: 1px solid rgba(56, 189, 248, 0.2);
     border-radius: 16px;
     padding: 28px;
     text-align: center;
@@ -564,10 +564,10 @@ main,
     width: 160px;
     height: 160px;
     border-radius: 50%;
-    border: 3px solid deepskyblue;
+    border: 3px solid #38bdf8;
     overflow: hidden;
     margin-bottom: 20px;
-    background: midnightblue;
+    background: #0f172a;
     transition: transform 0.3s ease;
 }
 
@@ -582,14 +582,14 @@ main,
 }
 
 .karta-boczna-o-mnie h3 {
-    color: white;
+    color: #ffffff;
     font-size: 20px;
     font-weight: 700;
     margin: 0 0 4px 0;
 }
 
 .karta-boczna-o-mnie .rola {
-    color: deepskyblue;
+    color: #38bdf8;
     font-size: 14px;
     font-weight: 600;
     display: block;
@@ -597,7 +597,7 @@ main,
 }
 
 .karta-boczna-o-mnie .opis-biograficzny {
-    color: slategray;
+    color: #94a3b8;
     font-size: 13px;
     line-height: 1.5;
     margin: 0 0 20px 0;
@@ -605,23 +605,23 @@ main,
 
 .szczegoly-informacyjne {
     width: 100%;
-    border-top: 1px solid steelblue;
+    border-top: 1px solid #334155;
     padding-top: 16px;
     display: flex;
     flex-direction: column;
     gap: 8px;
     text-align: left;
     font-size: 13px;
-    color: lightgray;
+    color: #cbd5e1;
 }
 
 .szczegoly-informacyjne strong {
-    color: deepskyblue;
+    color: #38bdf8;
 }
 
 .karta-glowna-o-mnie {
-    background: darkslategrey;
-    border: 1px solid steelblue;
+    background: #1e293b;
+    border: 1px solid rgba(56, 189, 248, 0.2);
     border-radius: 16px;
     padding: 36px;
     display: flex;
@@ -630,17 +630,17 @@ main,
 }
 
 .karta-glowna-o-mnie h2 {
-    color: white;
+    color: #ffffff;
     font-size: 24px;
     font-weight: 700;
     margin: 0 0 20px 0;
     padding-left: 14px;
-    border-left: 4px solid deepskyblue;
+    border-left: 4px solid #38bdf8;
     line-height: 1.3;
 }
 
 .karta-glowna-o-mnie p {
-    color: slategray;
+    color: #94a3b8;
     font-size: 15px;
     line-height: 1.7;
     margin-bottom: 16px;
@@ -651,22 +651,22 @@ main,
 }
 
 .baner-wezwania-do-dzialania {
-    background: darkslategrey;
-    border: 1px solid steelblue;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    border: 1px solid rgba(56, 189, 248, 0.3);
     border-radius: 16px;
     padding: 40px;
     text-align: center;
 }
 
 .baner-wezwania-do-dzialania h2 {
-    color: white;
+    color: #ffffff;
     font-size: 24px;
     font-weight: 700;
     margin: 0 0 12px 0;
 }
 
 .baner-wezwania-do-dzialania p {
-    color: slategray;
+    color: #94a3b8;
     font-size: 15px;
     max-width: 600px;
     margin: 0 auto 24px auto;
@@ -680,8 +680,8 @@ main,
 }
 
 .karta-uslugi {
-    background: darkslategrey;
-    border: 1px solid steelblue;
+    background: #1e293b;
+    border: 1px solid rgba(56, 189, 248, 0.2);
     border-radius: 16px;
     padding: 32px;
     display: flex;
@@ -689,29 +689,29 @@ main,
 }
 
 .karta-uslugi h3 {
-    color: white;
+    color: #ffffff;
     font-size: 20px;
     font-weight: 700;
     margin: 0 0 12px 0;
 }
 
 .karta-uslugi p {
-    color: slategray;
+    color: #94a3b8;
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
 .sekcja-cennika {
-    background: darkslategrey;
-    border: 1px solid steelblue;
+    background: #1e293b;
+    border: 1px solid rgba(56, 189, 248, 0.15);
     border-radius: 16px;
     padding: 32px;
     margin-bottom: 40px;
 }
 
 .sekcja-cennika h2 {
-    color: white;
+    color: #ffffff;
     font-size: 22px;
     font-weight: 700;
     margin: 0 0 24px 0;
@@ -726,44 +726,44 @@ main,
 }
 
 .karta-cennika {
-    background: midnightblue;
+    background: #0f172a;
     padding: 24px;
     border-radius: 12px;
-    border: 1px solid steelblue;
+    border: 1px solid #334155;
 }
 
 .karta-cennika.wyrozniona {
-    border-color: deepskyblue;
+    border-color: rgba(56, 189, 248, 0.3);
 }
 
 .karta-cennika h4 {
-    color: slategray;
+    color: #94a3b8;
     margin: 0 0 8px 0;
     font-size: 14px;
 }
 
 .karta-cennika .cena {
-    color: deepskyblue;
+    color: #38bdf8;
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 6px;
 }
 
 .karta-cennika span {
-    color: gray;
+    color: #64748b;
     font-size: 12px;
 }
 
 .informacje-rozliczeniowe {
-    background: midnightblue;
-    border: 1px dashed steelblue;
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px dashed rgba(56, 189, 248, 0.25);
     border-radius: 12px;
     padding: 16px 24px;
     margin-bottom: 60px;
 }
 
 .informacje-rozliczeniowe p {
-    color: slategray;
+    color: #94a3b8;
     font-size: 13px;
     margin: 0;
     line-height: 1.5;
@@ -784,8 +784,8 @@ main,
 }
 
 .karta-kontaktowa {
-    background: darkslategrey;
-    border: 1px solid steelblue;
+    background: #1e293b;
+    border: 1px solid rgba(56, 189, 248, 0.2);
     border-radius: 16px;
     padding: 28px;
 }
@@ -800,26 +800,26 @@ main,
 .odznaka-statusu .kropka-zielona {
     width: 10px;
     height: 10px;
-    background: mediumseagreen;
+    background: #10b981;
     border-radius: 50%;
     display: inline-block;
 }
 
 .odznaka-statusu span {
-    color: mediumseagreen;
+    color: #10b981;
     font-weight: 700;
     font-size: 14px;
 }
 
 .karta-kontaktowa h3 {
-    color: white;
+    color: #ffffff;
     font-size: 18px;
     font-weight: 700;
     margin: 0 0 8px 0;
 }
 
 .karta-kontaktowa p {
-    color: slategray;
+    color: #94a3b8;
     font-size: 13px;
     line-height: 1.5;
     margin: 0 0 16px 0;
@@ -830,9 +830,9 @@ main,
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background: midnightblue;
-    border: 1px solid steelblue;
-    color: deepskyblue;
+    background: rgba(24, 119, 242, 0.1);
+    border: 1px solid rgba(24, 119, 242, 0.4);
+    color: #38bdf8;
     font-weight: 600;
     padding: 12px 20px;
     border-radius: 8px;
@@ -841,8 +841,8 @@ main,
 }
 
 .karta-formularza-kontaktowego {
-    background: darkslategrey;
-    border: 1px solid steelblue;
+    background: #1e293b;
+    border: 1px solid rgba(56, 189, 248, 0.2);
     border-radius: 16px;
     padding: 36px;
     display: flex;
@@ -851,14 +851,14 @@ main,
 }
 
 .karta-formularza-kontaktowego h3 {
-    color: white;
+    color: #ffffff;
     font-size: 22px;
     font-weight: 700;
     margin: 0 0 8px 0;
 }
 
 .karta-formularza-kontaktowego p {
-    color: slategray;
+    color: #94a3b8;
     font-size: 14px;
     margin: 0 0 24px 0;
 }
@@ -872,7 +872,7 @@ main,
 }
 
 .wlasny-formularz label {
-    color: lightgray;
+    color: #cbd5e1;
     font-size: 13px;
     font-weight: 600;
     display: block;
@@ -882,11 +882,11 @@ main,
 .wlasny-formularz input[type="email"],
 .wlasny-formularz textarea {
     width: 100%;
-    background: midnightblue;
-    border: 1px solid steelblue;
+    background: #0f172a;
+    border: 1px solid #334155;
     border-radius: 8px;
     padding: 12px 16px;
-    color: white;
+    color: #ffffff;
     font-size: 14px;
     outline: none;
     box-sizing: border-box;
@@ -897,12 +897,12 @@ main,
 
 .wlasny-formularz input:focus,
 .wlasny-formularz textarea:focus {
-    border-color: deepskyblue;
+    border-color: #38bdf8;
 }
 
 .wlasny-formularz button[type="submit"] {
-    background: deepskyblue;
-    color: darkblue;
+    background: #38bdf8;
+    color: #0f172a;
     font-weight: 700;
     border: none;
     padding: 14px 24px;
@@ -914,15 +914,15 @@ main,
 }
 
 .wlasny-formularz button[type="submit"]:hover {
-    background: dodgerblue;
-    color: white;
+    background: #0284c7;
+    color: #ffffff;
 }
 
 .komunikat-sukcesu-formularza {
     display: none;
-    background: midnightblue;
-    border: 1px solid mediumseagreen;
-    color: mediumseagreen;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid #10b981;
+    color: #10b981;
     padding: 14px;
     border-radius: 8px;
     text-align: center;
@@ -931,8 +931,8 @@ main,
 }
 
 .stopka-minimalna {
-    background: darkslategrey;
-    border-top: 1px solid steelblue;
+    background: #0f172a;
+    border-top: 1px solid #1e293b;
     padding: 24px 0;
     margin-top: auto;
 }
@@ -945,18 +945,18 @@ main,
     justify-content: space-between;
     align-items: center;
     font-size: 14px;
-    color: gray;
+    color: #64748b;
 }
 
 .elastyczna-stopka a {
-    color: slategray;
+    color: #94a3b8;
     text-decoration: none;
     margin-left: 20px;
     transition: color 0.2s;
 }
 
 .elastyczna-stopka a:hover {
-    color: deepskyblue;
+    color: #38bdf8;
 }
 
 @media (max-width: 1024px) {
