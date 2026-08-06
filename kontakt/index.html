@@ -9,15 +9,15 @@
 </head>
 <body class="wp-singular page-template-page-kontakt page wp-theme-moj-motyw">
 
-<header class="site-header">
-    <div class="header-container">
-        <a href="https://kmiepaw08-bot.github.io/portfolio/" class="logo-box">
+<header class="naglowek-strony">
+    <div class="kontener-naglowka">
+        <a href="https://kmiepaw08-bot.github.io/portfolio/" class="pudelko-logo">
             <img src="https://kmiepaw08-bot.github.io/portfolio/wp-content/uploads/2026/08/DevInf.svg" alt="DevInformatyk Logo">
         </a>
-        <nav class="main-navigation">
+        <nav class="nawigacja-glowna">
             <ul id="menu-menu-glowne" class="menu">
                 <li class="menu-item"><a href="https://kmiepaw08-bot.github.io/portfolio/">Strona Główna</a></li>
-                <li class="menu-item current-menu-item"><a href="https://kmiepaw08-bot.github.io/portfolio/kontakt/" aria-current="page">Kontakt</a></li>
+                <li class="menu-item element-aktualny"><a href="https://kmiepaw08-bot.github.io/portfolio/kontakt/" aria-current="page">Kontakt</a></li>
                 <li class="menu-item"><a href="https://kmiepaw08-bot.github.io/portfolio/uslugi/">Usługi</a></li>
                 <li class="menu-item"><a href="https://kmiepaw08-bot.github.io/portfolio/o-mnie/">O mnie</a></li>
             </ul>
@@ -26,17 +26,17 @@
 </header>
 
 <main>
-    <section class="contact-page">
-        <div class="page-header">
+    <section class="strona-kontaktowa">
+        <div class="naglowek-tresci">
             <h1>Kontakt</h1>
             <p>Jeśli chcesz omówić szczegóły projektu lub zadać pytanie – napisz przez formularz lub wiadomość prywatną.</p>
         </div>
 
-        <div class="contact-grid">
-            <div class="contact-info-column">
-                <div class="contact-card">
-                    <div class="status-badge">
-                        <span class="dot-green"></span>
+        <div class="siatka-kontaktu">
+            <div class="kolumna-informacji-kontaktowych">
+                <div class="karta-kontaktowa">
+                    <div class="odznaka-statusu">
+                        <span class="kropka-zielona"></span>
                         <span>Status: Dostępny</span>
                     </div>
                     <p>
@@ -44,38 +44,38 @@
                     </p>
                 </div>
 
-                <div class="contact-card">
+                <div class="karta-kontaktowa">
                     <h3>Social Media</h3>
                     <p>
                         Możesz również napisać bezpośrednio na Facebooku:
                     </p>
-                    <a href="https://www.facebook.com/profile.php?id=100046752337336&amp;locale=pl_PL" target="_blank" rel="noopener noreferrer" class="fb-btn">
+                    <a href="https://www.facebook.com/profile.php?id=100046752337336&amp;locale=pl_PL" target="_blank" rel="noopener noreferrer" class="przycisk-facebook">
                         Profil na Facebooku &rarr;
                     </a>
                 </div>
             </div>
 
-            <div class="contact-form-card">
+            <div class="karta-formularza-kontaktowego">
                 <h3>Napisz wiadomość</h3>
                 <p>Wypełnij formularz poniżej.</p>
                 
-                <div class="custom-form">
-                    <form id="contactForm" action="https://formspree.io/f/xkjwnzvd" method="POST">
+                <div class="wlasny-formularz">
+                    <form id="formularzKontaktowy" action="https://formspree.io/f/xkjwnzvd" method="POST">
                         <label>Imię i nazwisko
-                            <input type="text" name="name" required>
+                            <input type="text" name="imie" required>
                         </label>
                         <label>Adres e-mail
                             <input type="email" name="email" required>
                         </label>
                         <label>Temat
-                            <input type="text" name="subject" required>
+                            <input type="text" name="temat" required>
                         </label>
                         <label>Wiadomość
-                            <textarea name="message" rows="5"></textarea>
+                            <textarea name="wiadomosc" rows="5"></textarea>
                         </label>
-                        <button type="submit" id="submitBtn">Wyślij</button>
+                        <button type="submit" id="przyciskWyslij">Wyślij</button>
                     </form>
-                    <div id="formSuccess" class="form-success-msg">
+                    <div id="sukcesFormularza" class="komunikat-sukcesu-formularza">
                         Wiadomość została wysłana.
                     </div>
                 </div>
@@ -85,44 +85,44 @@
 </main>
 
 <script>
-    document.getElementById("contactForm").addEventListener("submit", async function(e) {
-        e.preventDefault();
-        const form = e.target;
-        const btn = document.getElementById("submitBtn");
-        const successMsg = document.getElementById("formSuccess");
+    document.getElementById("formularzKontaktowy").addEventListener("submit", async function(zdarzenie) {
+        zdarzenie.preventDefault();
+        const formularz = zdarzenie.target;
+        const przycisk = document.getElementById("przyciskWyslij");
+        const komunikatSukcesu = document.getElementById("sukcesFormularza");
         
-        btn.disabled = true;
-        btn.textContent = "Wysyłanie...";
+        przycisk.disabled = true;
+        przycisk.textContent = "Wysyłanie...";
 
         try {
-            const response = await fetch(form.action, {
-                method: form.method,
-                body: new FormData(form),
+            const odpowiedz = await fetch(formularz.action, {
+                method: formularz.method,
+                body: new FormData(formularz),
                 headers: {
                     'Accept': 'json'
                 }
             });
 
-            if (response.ok) {
-                form.reset();
-                form.style.display = "none";
-                successMsg.style.display = "block";
+            if (odpowiedz.ok) {
+                formularz.reset();
+                formularz.style.display = "none";
+                komunikatSukcesu.style.display = "block";
             } else {
                 alert("Nie udało się wysłać wiadomości.");
-                btn.disabled = false;
-                btn.textContent = "Wyślij";
+                przycisk.disabled = false;
+                przycisk.textContent = "Wyślij";
             }
-        } catch (error) {
+        } catch (blad) {
             alert("Błąd połączenia z serwerem.");
-            btn.disabled = false;
-            btn.textContent = "Wyślij";
+            przycisk.disabled = false;
+            przycisk.textContent = "Wyślij";
         }
     });
 </script>
 
-<footer class="minimal-footer">
-    <div class="footer-flex">
-         <div>&copy; 2026 Paweł Kmiecik. Kodowane od zera</div>
+<footer class="stopka-minimalna">
+    <div class="elastyczna-stopka">
+        <div>&copy; 2026 Paweł Kmiecik. Kodowane od zera.</div>
         <div>
             <a href="https://kmiepaw08-bot.github.io/portfolio/">Strona Główna</a>
             <a href="https://kmiepaw08-bot.github.io/portfolio/uslugi/">Usługi</a>
