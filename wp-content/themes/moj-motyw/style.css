@@ -620,11 +620,6 @@ main,
     overflow: hidden;
     margin-bottom: 20px;
     background: #0f172a;
-    transition: transform 0.3s ease;
-}
-
-.pudelko-zdjecia-profilowego:hover {
-    transform: scale(1.02);
 }
 
 .pudelko-zdjecia-profilowego img {
