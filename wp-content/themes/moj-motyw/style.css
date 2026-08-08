@@ -1,6 +1,6 @@
 Theme Name: Mój Motyw
 Author: Dev
-Version: 1.2
+Version: 1.3
 
 * {
     box-sizing: border-box;
@@ -211,7 +211,7 @@ main,
 .sekcja-technologie,
 .sekcja-cennika,
 .sekcja-formularza {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .pudelko-glowne {
@@ -233,9 +233,15 @@ main,
     margin-bottom: 15px;
 }
 
+.pudelko-glowne h2 {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
 .pudelko-glowne p {
     color: #cbd5e1;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .przycisk {
@@ -246,7 +252,7 @@ main,
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
-    margin-top: 20px;
+    margin-top: 15px;
     border: none;
     cursor: pointer;
     font-size: 15px;
@@ -263,7 +269,7 @@ main,
 .siatka-uslug,
 .siatka-cennika {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
@@ -276,8 +282,25 @@ main,
     border-radius: 12px;
 }
 
+.karta-uslugi h3 {
+    color: #f1f5f9;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.karta-uslugi p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
 .karta-cennika.wyrozniona {
     border-color: #38bdf8;
+}
+
+.karta-cennika h4 {
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 6px;
 }
 
 .karta-cennika .cena {
@@ -325,12 +348,6 @@ main,
 .pole-formularza textarea:focus {
     outline: none;
     border-color: #38bdf8;
-}
-
-.siatka-o-mnie {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
 }
 
 .profil-o-mnie {
