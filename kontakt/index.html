@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../wp-content/themes/moj-motyw/favicon-512x512.png" type="image/png">
+    <link rel="icon" href="https://devinformatyk.github.io/portfolio/wp-content/themes/moj-motyw/favicon-512x512.png" type="image/png">
     <title>Kontakt &ndash; Paweł Kmiecik</title>
-    <link rel="stylesheet" href="../wp-content/themes/moj-motyw/style.css">
+    <link rel="stylesheet" id="moj-motyw-style-css" href="https://devinformatyk.github.io/portfolio/wp-content/themes/moj-motyw/style.css?ver=7.0.2" media="all">
 </head>
-<body class="strona-kontakt">
+<body class="strona-kontaktowa wp-theme-moj-motyw">
 
 <header class="naglowek-strony">
     <div class="kontener-naglowka">
         <a href="https://devinformatyk.github.io/portfolio/" class="pudelko-logo">
-            <img src="../wp-content/uploads/2026/08/DevInf.svg" alt="DevInformatyk Logo">
+            <img src="https://devinformatyk.github.io/portfolio/wp-content/uploads/2026/08/DevInf.svg" alt="DevInformatyk Logo">
         </a>
         <nav class="nawigacja-glowna">
-            <ul class="menu">
+            <ul id="menu-glowne" class="menu">
                 <li><a href="https://devinformatyk.github.io/portfolio/">Strona Główna</a></li>
-                <li class="element-aktualny"><a href="https://devinformatyk.github.io/portfolio/kontakt/">Kontakt</a></li>
+                <li class="element-aktualny"><a href="https://devinformatyk.github.io/portfolio/kontakt/" aria-current="page">Kontakt</a></li>
                 <li><a href="https://devinformatyk.github.io/portfolio/uslugi/">Usługi</a></li>
                 <li><a href="https://devinformatyk.github.io/portfolio/o-mnie/">O mnie</a></li>
             </ul>
@@ -26,59 +26,103 @@
 </header>
 
 <main>
-    <div class="uklad-glowny">
-        <div class="glowna-tresc-strony">
-            <section class="pudelko-glowne">
-                <h1>Kontakt</h1>
-                <p>Jeśli chcesz omówić szczegóły projektu lub zadać pytanie – napisz przez formularz lub wiadomość prywatną.</p>
-            </section>
-
-            <section class="sekcja-formularza">
-                <h2 class="tytul-sekcji">Napisz wiadomość</h2>
-                <div class="karta-opisowa">
-                    <form class="formularz-kontaktowy" action="https://formspree.io/f/xvgzobee" method="POST">
-                        <div class="pole-formularza">
-                            <label>Imię i nazwisko</label>
-                            <input type="text" name="imie_i_nazwisko" required placeholder="Twoje imię i nazwisko">
-                        </div>
-                        <div class="pole-formularza">
-                            <label>Adres e-mail</label>
-                            <input type="email" name="email" required placeholder="twoj@email.pl">
-                        </div>
-                        <div class="pole-formularza">
-                            <label>Temat</label>
-                            <input type="text" name="temat" required placeholder="np. Wycena strony WWW">
-                        </div>
-                        <div class="pole-formularza">
-                            <label>Wiadomość</label>
-                            <textarea name="tresc_wiadomosci" rows="5" required placeholder="Opisz swój projekt..."></textarea>
-                        </div>
-                        <button type="submit" class="przycisk">Wyślij wiadomość</button>
-                    </form>
-                </div>
-            </section>
+    <section class="strona-kontaktowa">
+        <div class="naglowek-strony-tytul">
+            <h1>Kontakt</h1>
+            <p>Jeśli chcesz omówić szczegóły projektu lub zadać pytanie – napisz przez formularz lub wiadomość prywatną.</p>
         </div>
 
-        <aside class="pasek-boczny">
-            <div class="element-paska-bocznego">
-                <div class="status-paska-bocznego">
-                    <span class="kropka"></span> Status: Dostępny
+        <div class="siatka-kontaktowa">
+            <div class="kolumna-informacji-kontaktowych">
+                <div class="karta-kontaktowa">
+                    <div class="odznaka-statusu">
+                        <span class="kropka-zielona"></span>
+                        <span>Status: Dostępny</span>
+                    </div>
+                    <p>
+                        Przyjmuję zlecenia na strony internetowe oraz modyfikacje zaplecza PHP.
+                    </p>
                 </div>
-                <p>Przyjmuję nowe zlecenia na strony internetowe oraz aplikacje webowe.</p>
+
+                <div class="karta-kontaktowa">
+                    <h3>Social Media</h3>
+                    <p>
+                        Możesz również napisać bezpośrednio na Facebooku:
+                    </p>
+                    <a href="https://www.facebook.com/profile.php?id=100046752337336&amp;locale=pl_PL" target="_blank" rel="noopener noreferrer" class="przycisk-facebook">
+                        Profil na Facebooku &rarr;
+                    </a>
+                </div>
             </div>
 
-            <div class="element-paska-bocznego">
-                <h3>Social Media</h3>
-                <p>Możesz również napisać bezpośrednio na Facebooku albo Messengerze:</p>
-                <a href="https://www.facebook.com/profile.php?id=61563820252579" target="_blank" rel="noopener noreferrer" class="przycisk">Profil na Facebooku &rarr;</a>
+            <div class="karta-formularza-kontaktowego">
+                <h3>Napisz wiadomość</h3>
+                <p>Wypełnij formularz poniżej.</p>
+                
+                <div class="wlasny-formularz">
+                    <form id="formularzKontaktowy" action="https://formspree.io/f/xkjwnzvd" method="POST">
+                        <label>Imię i nazwisko
+                            <input type="text" name="imie_nazwisko" required>
+                        </label>
+                        <label>Adres e-mail
+                            <input type="email" name="email" required>
+                        </label>
+                        <label>Temat
+                            <input type="text" name="temat" required>
+                        </label>
+                        <label>Wiadomość
+                            <textarea name="tresc_wiadomosci" rows="5"></textarea>
+                        </label>
+                        <button type="submit" id="przyciskWyslij" class="przycisk">Wyślij</button>
+                    </form>
+                    <div id="komunikatSukcesu" class="komunikat-sukcesu-formularza">
+                        Wiadomość została wysłana.
+                    </div>
+                </div>
             </div>
-        </aside>
-    </div>
+        </div>
+    </section>
 </main>
+
+<script>
+    document.getElementById("formularzKontaktowy").addEventListener("submit", async function(e) {
+        e.preventDefault();
+        const formularz = e.target;
+        const przycisk = document.getElementById("przyciskWyslij");
+        const komunikatSukcesu = document.getElementById("komunikatSukcesu");
+        
+        przycisk.disabled = true;
+        przycisk.textContent = "Wysyłanie...";
+
+        try {
+            const odpowiedz = await fetch(formularz.action, {
+                method: formularz.method,
+                body: new FormData(formularz),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (odpowiedz.ok) {
+                formularz.reset();
+                formularz.style.display = "none";
+                komunikatSukcesu.style.display = "block";
+            } else {
+                alert("Nie udało się wysłać wiadomości.");
+                przycisk.disabled = false;
+                przycisk.textContent = "Wyślij";
+            }
+        } catch (error) {
+            alert("Błąd połączenia z serwerem.");
+            przycisk.disabled = false;
+            przycisk.textContent = "Wyślij";
+        }
+    });
+</script>
 
 <footer class="stopka-minimalna">
     <div class="elastyczna-stopka">
-        <div>&copy; 2026 Paweł Kmiecik. Kodowane w czystym PHP &amp; CSS.</div>
+        <div>&copy; DevInformatyk. Tworzenie stron internetowych od zera</div>
         <div>
             <a href="https://devinformatyk.github.io/portfolio/">Strona Główna</a>
             <a href="https://devinformatyk.github.io/portfolio/uslugi/">Usługi</a>
