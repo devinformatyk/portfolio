@@ -1,6 +1,6 @@
 Theme Name: Mój Motyw
 Author: Dev
-Version: 1.1
+Version: 1.2
 
 * {
     box-sizing: border-box;
@@ -204,31 +204,13 @@ main,
     font-weight: 700;
 }
 
-.naglowek-tresci {
-    margin-bottom: 40px;
-}
-
-.naglowek-tresci h1 {
-    color: #ffffff;
-    font-size: 32px;
-    font-weight: 700;
-    padding-left: 16px;
-    border-left: 4px solid #38bdf8;
-    margin-bottom: 12px;
-}
-
-.naglowek-tresci p {
-    color: #94a3b8;
-    font-size: 16px;
-    margin: 0;
-    padding-left: 20px;
-}
-
 .sekcja-uslugi, 
 .sekcja-proces, 
 .sekcja-projekty, 
 .sekcja-pytania, 
-.sekcja-technologie {
+.sekcja-technologie,
+.sekcja-cennika,
+.sekcja-formularza {
     margin-bottom: 60px;
 }
 
@@ -265,6 +247,9 @@ main,
     text-decoration: none;
     font-weight: bold;
     margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
     transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -275,333 +260,117 @@ main,
     box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
 }
 
-.siatka-technologii {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+.siatka-uslug,
+.siatka-cennika {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
 }
 
-.karta-technologii {
+.karta-uslugi,
+.karta-cennika,
+.karta-opisowa {
     background: #1e293b;
     border: 1px solid #334155;
-    padding: 12px 20px;
-    border-radius: 8px;
-    color: #f1f5f9;
-    font-weight: 600;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
-    position: relative;
-    cursor: default;
-}
-
-.karta-technologii:hover {
-    transform: translateY(-3px);
-    border-color: #38bdf8;
-    background: #0f172a;
-}
-
-.karta-technologii[data-tooltip]::before {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: 125%;
-    left: 50%;
-    transform: translateX(-50%) translateY(5px);
-    background-color: #0f172a;
-    color: #cbd5e1;
-    border: 1px solid #38bdf8;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 400;
-    white-space: normal;
-    width: max-content;
-    max-width: 220px;
-    text-align: center;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
-    z-index: 10;
-}
-
-.karta-technologii[data-tooltip]::after {
-    content: '';
-    position: absolute;
-    bottom: 110%;
-    left: 50%;
-    transform: translateX(-50%);
-    border-width: 6px 6px 0 6px;
-    border-style: solid;
-    border-color: #38bdf8 transparent transparent transparent;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity 0.2s ease, visibility 0.2s ease;
-    z-index: 10;
-}
-
-.karta-technologii:hover::before,
-.karta-technologii:hover::after {
-    opacity: 1;
-    visibility: visible;
-}
-
-.karta-technologii:hover::before {
-    transform: translateX(-50%) translateY(0);
-}
-
-.lista-procesu {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-}
-
-.element-procesu {
-    background: #1e293b;
-    border-left: 3px solid #38bdf8;
-    padding: 20px 24px;
-    border-radius: 0 12px 12px 0;
-}
-
-.element-procesu h3 {
-    color: #f1f5f9;
-    font-size: 17px;
-    margin-bottom: 6px;
-}
-
-.element-procesu p {
-    color: #94a3b8;
-    font-size: 14px;
-    margin: 0;
-    line-height: 1.5;
-}
-
-.siatka-projektow {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-}
-
-.link-karty-projektu {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-}
-
-.karta-projektu {
-    background: #1e293b;
+    padding: 24px;
     border-radius: 12px;
-    border: 1px solid #334155;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.karta-projektu-interaktywna:hover {
-    transform: translateY(-5px);
+.karta-cennika.wyrozniona {
     border-color: #38bdf8;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
 }
 
-.karta-projektu-interaktywna:hover .obrazek-projektu img {
-    transform: scale(1.03);
-}
-
-.karta-projektu-interaktywna:hover .link-projektu {
-    color: #818cf8;
-}
-
-.karta-projektu.w-trakcie {
-    border-style: dashed;
-    opacity: 0.95;
-}
-
-.obrazek-projektu {
-    height: 180px;
-    background: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    border-bottom: 1px solid #334155;
-    padding: 15px;
-}
-
-.obrazek-projektu img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.atrapa-obrazka-projektu {
-    height: 180px;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid #334155;
-    padding: 20px;
-}
-
-.pudelko-atrapy {
-    width: 85%;
-    background: #0b1120;
-    border: 1px solid rgba(56, 189, 248, 0.2);
-    border-radius: 8px;
-    padding: 12px;
-}
-
-.kropki-atrapy {
-    display: flex;
-    gap: 6px;
-    margin-bottom: 10px;
-}
-
-.kropki-atrapy span {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-}
-
-.kropki-atrapy span.kropka-czerwona { background: #ef4444; }
-.kropki-atrapy span.kropka-zolta { background: #f59e0b; }
-.kropki-atrapy span.kropka-zielona { background: #10b981; }
-
-.tekst-atrapy {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.tekst-atrapy code {
-    font-size: 11px;
+.karta-cennika .cena {
     color: #38bdf8;
-    font-family: monospace;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 8px 0;
 }
 
-.tekst-atrapy span {
-    font-size: 10px;
-    background: rgba(56, 189, 248, 0.1);
-    color: #38bdf8;
-    padding: 2px 6px;
-    border-radius: 4px;
-}
-
-.zawartosc-projektu {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.naglowek-projektu {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 10px;
-}
-
-.naglowek-projektu h3 {
-    color: #f1f5f9;
-}
-
-.odznaka-projektu {
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-size: 11px;
-    font-weight: 600;
-    background: rgba(56, 189, 248, 0.15);
-    color: #38bdf8;
-    border: 1px solid rgba(56, 189, 248, 0.3);
-    display: inline-block;
-}
-
-.odznaka-projektu.ostrzezenie {
-    background: rgba(245, 158, 11, 0.15);
-    color: #f59e0b;
-    border-color: rgba(245, 158, 11, 0.3);
-}
-
-.zawartosc-projektu p {
-    flex: 1;
-    color: #94a3b8;
-}
-
-.tagi-technologii {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin: 15px 0;
-}
-
-.tagi-technologii span {
-    font-size: 11px;
-    background: #0f172a;
-    padding: 3px 8px;
-    border-radius: 4px;
-    border: 1px solid #334155;
-    color: #38bdf8;
-}
-
-.link-projektu {
-    color: #38bdf8;
-    font-weight: 600;
-    font-size: 14px;
-    margin-top: auto;
-    transition: color 0.2s ease;
-}
-
-.tekst-statusu-projektu {
+.karta-cennika span {
     font-size: 13px;
     color: #64748b;
-    font-style: italic;
-    margin-top: auto;
 }
 
-.siatka-pytan {
+.formularz-kontaktowy {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.pole-formularza {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.pole-formularza label {
+    color: #f1f5f9;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.pole-formularza input,
+.pole-formularza textarea {
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    padding: 12px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.pole-formularza input:focus,
+.pole-formularza textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+}
+
+.siatka-o-mnie {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 24px;
 }
 
-.karta-pytania {
-    background: #1e293b;
-    border: 1px solid #334155;
-    border-radius: 12px;
-    padding: 24px;
+.profil-o-mnie {
+    text-align: center;
 }
 
-.karta-pytania h3 {
-    color: #f1f5f9;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.karta-pytania p {
-    color: #94a3b8;
+.profil-o-mnie .rola {
+    color: #38bdf8;
     font-size: 14px;
-    line-height: 1.6;
-    margin: 0;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.profil-o-mnie .szczegoly {
+    text-align: left;
+    font-size: 13px;
+    color: #cbd5e1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top: 1px solid #334155;
+    padding-top: 12px;
+    margin-top: 12px;
 }
 
 .pudelko-zdjecia-profilowego {
-    width: 160px;
-    height: 160px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     border: 3px solid #38bdf8;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin: 0 auto 15px auto;
     background: #0f172a;
+}
+
+.pudelko-zdjecia-profilowego img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .stopka-minimalna {
@@ -637,29 +406,7 @@ main,
     .uklad-glowny {
         grid-template-columns: 1fr;
     }
-
     .pasek-boczny {
         position: static;
-    }
-
-    .siatka-projektow {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 900px) {
-    .lista-procesu,
-    .siatka-pytan {
-        grid-template-columns: 1fr;
-    }
-
-    .elastyczna-stopka {
-        flex-direction: column;
-        gap: 12px;
-        text-align: center;
-    }
-
-    .elastyczna-stopka a {
-        margin: 0 10px;
     }
 }
