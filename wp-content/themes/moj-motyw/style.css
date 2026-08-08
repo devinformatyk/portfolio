@@ -1,6 +1,6 @@
 Theme Name: Mój Motyw
 Author: Dev
-Version: 2.2
+Version: 2.3
 
 * {
     box-sizing: border-box;
@@ -267,7 +267,7 @@ main {
     justify-content: center;
     gap: 10px;
     background-color: #0f172a;
-    color: #f1f5f9;
+    color: #94a3b8;
     border: 1px solid #334155;
     padding: 12px 20px;
     border-radius: 8px;
@@ -275,7 +275,7 @@ main {
     font-weight: 600;
     font-size: 14px;
     width: 100%;
-    margin-top: 15px;
+    margin-top: auto;
     transition: all 0.2s ease;
 }
 
@@ -512,12 +512,44 @@ main {
     gap: 20px;
 }
 
-.karta-kontaktowa,
+.karta-kontaktowa {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.karta-kontaktowa h3 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.karta-kontaktowa p {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
 .karta-formularza-kontaktowego {
     background: #1e293b;
     border: 1px solid #334155;
     border-radius: 12px;
     padding: 24px;
+}
+
+.karta-formularza-kontaktowego h3 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.karta-formularza-kontaktowego p {
+    color: #94a3b8;
+    font-size: 14px;
 }
 
 .wlasny-formularz form {
@@ -531,7 +563,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 6px;
-    color: #f1f5f9;
+    color: #cbd5e1;
     font-weight: 600;
     font-size: 14px;
 }
@@ -750,7 +782,7 @@ main {
     color: #38bdf8;
 }
 
-/* Wersja Mobilna (Media Queries połączone w jedno miejsce) */
+/* Wersja Mobilna */
 @media (max-width: 1024px) {
     .uklad-glowny,
     .siatka-kontaktowa,
