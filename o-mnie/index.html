@@ -3,74 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../wp-content/themes/moj-motyw/favicon-512x512.png" type="image/png">
+    <link rel="icon" href="https://devinformatyk.github.io/portfolio/wp-content/themes/moj-motyw/favicon-512x512.png" type="image/png">
     <title>O mnie &ndash; Paweł Kmiecik</title>
-    <link rel="stylesheet" href="../wp-content/themes/moj-motyw/style.css">
+    <link rel="stylesheet" id="moj-motyw-style-css" href="https://devinformatyk.github.io/portfolio/wp-content/themes/moj-motyw/style.css?ver=7.0.2" media="all">
 </head>
-<body class="strona-o-mnie">
+<body class="strona-o-mnie wp-theme-moj-motyw">
 
 <header class="naglowek-strony">
     <div class="kontener-naglowka">
         <a href="https://devinformatyk.github.io/portfolio/" class="pudelko-logo">
-            <img src="../wp-content/uploads/2026/08/DevInf.svg" alt="DevInformatyk Logo">
+            <img src="https://devinformatyk.github.io/portfolio/wp-content/uploads/2026/08/DevInf.svg" alt="DevInformatyk Logo">
         </a>
         <nav class="nawigacja-glowna">
-            <ul class="menu">
+            <ul id="menu-glowne" class="menu">
                 <li><a href="https://devinformatyk.github.io/portfolio/">Strona Główna</a></li>
                 <li><a href="https://devinformatyk.github.io/portfolio/kontakt/">Kontakt</a></li>
                 <li><a href="https://devinformatyk.github.io/portfolio/uslugi/">Usługi</a></li>
-                <li class="element-aktualny"><a href="https://devinformatyk.github.io/portfolio/o-mnie/">O mnie</a></li>
+                <li class="element-aktualny"><a href="https://devinformatyk.github.io/portfolio/o-mnie/" aria-current="page">O mnie</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
 <main>
-    <div class="uklad-glowny">
-        <div class="glowna-tresc-strony">
-            <section class="pudelko-glowne">
-                <h1>O mnie</h1>
-                <p>Czym się zajmuję i w jaki sposób realizuję projekty.</p>
-            </section>
-
-            <section class="sekcja-proces">
-                <h2 class="tytul-sekcji">Praktyczne podejście do kodowania</h2>
-                <div class="karta-opisowa">
-                    <p>Nazywam się Paweł Kmiecik. Uczę się na kierunku technik informatyk w Ostrowie Wielkopolskim, jednak największą część wiedzy zdobywam podczas samodzielnego uczenia się i realizowania konkretnych projektów.</p>
-                    <p style="margin-top: 12px;">W codziennej pracy stawiam na pisanie czystego kodu od zera. Wizualną część stron buduję w oparciu o semantyczny HTML5 i dopracowany CSS3 z użyciem JavaScriptu tam, gdzie potrzebna jest dynamiczna interakcja. Od strony backendu projektuję zaplecza w PHP oraz dedykowane relacyjne bazy danych MySQL.</p>
-                    <p style="margin-top: 12px;">Moim celem jest dostarczanie stron i aplikacji, które ładują się szybko, są proste w utrzymaniu i nie wymagają ciągłego nienaturalnego obciążania serwera.</p>
-                </div>
-            </section>
-
-            <section class="pudelko-glowne">
-                <h2>Chcesz omówić projekt?</h2>
-                <p>Wyślij krótką wiadomość przez formularz kontaktowy.</p>
-                <a href="https://devinformatyk.github.io/portfolio/kontakt/" class="przycisk">Przejdź do formularza &rarr;</a>
-            </section>
+    <section class="strona-o-mnie">
+        <div class="naglowek-strony-tytul">
+            <h1>O mnie</h1>
+            <p>Czym się zajmuję i w jaki sposób realizuję projekty.</p>
         </div>
 
-        <aside class="pasek-boczny">
-            <div class="element-paska-bocznego profil-o-mnie">
+        <div class="siatka-o-mnie">
+            <div class="karta-boczna-o-mnie">
                 <div class="pudelko-zdjecia-profilowego">
-                    <img src="../wp-content/uploads/2026/08/pawel.jpg" alt="Paweł Kmiecik">
+                    <img src="https://devinformatyk.github.io/portfolio/wp-content/uploads/2026/08/ja.jpeg" alt="Paweł Kmiecik">
                 </div>
                 <h3>Paweł Kmiecik</h3>
                 <span class="rola">Web Developer</span>
-                <p style="margin-bottom: 12px;">Tworzę strony internetowe z wykorzystaniem PHP, JavaScriptu oraz MySQL.</p>
-                
-                <div class="szczegoly">
+                <p>
+                    Tworzę strony internetowe z wykorzystaniem PHP, JavaScriptu oraz MySQL.
+                </p>
+                <div class="szczegoly-informacyjne">
                     <div><strong>Lokalizacja:</strong> Ostrów Wielkopolski i okolice</div>
                     <div><strong>Główne technologie:</strong> HTML, CSS, JS, PHP, MySQL</div>
                     <div><strong>Faktura:</strong> VAT (przez Useme)</div>
                 </div>
             </div>
-        </aside>
-    </div>
+
+            <div class="karta-glowna-o-mnie">
+                <div>
+                    <h2>Praktyczne podejście do kodowania</h2>
+                    
+                    <p>
+                        Nazywam się Paweł Kmiecik. Uczę się na kierunku technik informatyk w Ostrowie Wielkopolskim, jednak największą część wiedzy zdobywam podczas samodzielnego uczenia się i realizowania konkretnych projektów.
+                    </p>
+
+                    <p>
+                        W codziennej pracy stawiam na pisanie czystego kodu od zera. Wizualną część stron buduję w oparciu o semantyczny HTML5 i dopracowany CSS3 z użyciem JavaScriptu tam, gdzie potrzebna jest dynamiczna interakcja. Od strony backendu projektuję zaplecza w PHP oraz dedykowane relacyjne bazy danych MySQL (np. pod systemy logowania, formularze czy panele zarządzania).
+                    </p>
+
+                    <p>
+                        Do wsparcia procesu deweloperskiego wykorzystuję nowoczesne narzędzia programistyczne i asystentów AI – pomaga mi to szybciej wyszukiwać błędy w kodzie, refaktoryzować skrypty i skupić się na architekturze całego projektu.
+                    </p>
+
+                    <p>
+                        Moim celem jest dostarczanie stron i aplikacji, które ładują się szybko, są proste w utrzymaniu i nie wymagają ciągłego nienaturalnego obciążania serwera.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="baner-wezwania-do-dzialania">
+            <h2>Chcesz omówić projekt?</h2>
+            <p>Wyślij krótką wiadomość przez formularz kontaktowy.</p>
+            <a href="https://devinformatyk.github.io/portfolio/kontakt" class="przycisk">
+                Przejdź do formularza &rarr;
+            </a>
+        </div>
+    </section>
 </main>
 
 <footer class="stopka-minimalna">
     <div class="elastyczna-stopka">
-        <div>&copy; 2026 Paweł Kmiecik. Kodowane w czystym PHP &amp; CSS.</div>
+        <div>&copy; DevInformatyk. Tworzenie stron internetowych od zera</div>
         <div>
             <a href="https://devinformatyk.github.io/portfolio/">Strona Główna</a>
             <a href="https://devinformatyk.github.io/portfolio/uslugi/">Usługi</a>
