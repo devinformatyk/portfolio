@@ -7,7 +7,7 @@
     <title>Kontakt &ndash; Paweł Kmiecik</title>
     <link rel="stylesheet" href="../wp-content/themes/moj-motyw/style.css">
 </head>
-<body class="page-template-default page wp-theme-moj-motyw">
+<body class="strona-kontakt">
 
 <header class="naglowek-strony">
     <div class="kontener-naglowka">
@@ -16,62 +16,63 @@
         </a>
         <nav class="nawigacja-glowna">
             <ul class="menu">
-                <li class="menu-item"><a href="https://devinformatyk.github.io/portfolio/">Strona Główna</a></li>
-                <li class="menu-item element-aktualny"><a href="https://devinformatyk.github.io/portfolio/kontakt/" aria-current="page">Kontakt</a></li>
-                <li class="menu-item"><a href="https://devinformatyk.github.io/portfolio/uslugi/">Usługi</a></li>
-                <li class="menu-item"><a href="https://devinformatyk.github.io/portfolio/o-mnie/">O mnie</a></li>
+                <li><a href="https://devinformatyk.github.io/portfolio/">Strona Główna</a></li>
+                <li class="element-aktualny"><a href="https://devinformatyk.github.io/portfolio/kontakt/">Kontakt</a></li>
+                <li><a href="https://devinformatyk.github.io/portfolio/uslugi/">Usługi</a></li>
+                <li><a href="https://devinformatyk.github.io/portfolio/o-mnie/">O mnie</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
 <main>
-    <div class="naglowek-tresci">
-        <h1 class="tytul-strony">Kontakt</h1>
-        <p>Jeśli chcesz omówić szczegóły projektu lub zadać pytanie – napisz przez formularz lub wiadomość prywatną.</p>
-    </div>
+    <div class="uklad-glowny">
+        <div class="glowna-tresc-strony">
+            <section class="pudelko-glowne">
+                <h1>Kontakt</h1>
+                <p>Jeśli chcesz omówić szczegóły projektu lub zadać pytanie – napisz przez formularz lub wiadomość prywatną.</p>
+            </section>
 
-    <div class="siatka-kontaktu">
-        <div class="kolumna-informacji-kontaktowych">
-            <div class="karta-kontaktowa">
-                <div class="odznaka-statusu">
-                    <span class="kropka-zielona"></span>
-                    <span>Status: Dostępny</span>
+            <section class="sekcja-formularza">
+                <h2 class="tytul-sekcji">Napisz wiadomość</h2>
+                <div class="karta-opisowa">
+                    <form class="formularz-kontaktowy" action="https://formspree.io/f/xvgzobee" method="POST">
+                        <div class="pole-formularza">
+                            <label>Imię i nazwisko</label>
+                            <input type="text" name="imie_i_nazwisko" required placeholder="Twoje imię i nazwisko">
+                        </div>
+                        <div class="pole-formularza">
+                            <label>Adres e-mail</label>
+                            <input type="email" name="email" required placeholder="twoj@email.pl">
+                        </div>
+                        <div class="pole-formularza">
+                            <label>Temat</label>
+                            <input type="text" name="temat" required placeholder="np. Wycena strony WWW">
+                        </div>
+                        <div class="pole-formularza">
+                            <label>Wiadomość</label>
+                            <textarea name="tresc_wiadomosci" rows="5" required placeholder="Opisz swój projekt..."></textarea>
+                        </div>
+                        <button type="submit" class="przycisk">Wyślij wiadomość</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <aside class="pasek-boczny">
+            <div class="element-paska-bocznego">
+                <div class="status-paska-bocznego">
+                    <span class="kropka"></span> Status: Dostępny
                 </div>
                 <p>Przyjmuję nowe zlecenia na strony internetowe oraz aplikacje webowe.</p>
             </div>
 
-            <div class="karta-kontaktowa">
+            <div class="element-paska-bocznego">
                 <h3>Social Media</h3>
                 <p>Możesz również napisać bezpośrednio na Facebooku albo Messengerze:</p>
-                <a href="https://www.facebook.com/profile.php?id=61563820252579" target="_blank" rel="noopener noreferrer" class="przycisk-facebook">
-                    Profil na Facebooku &rarr;
-                </a>
+                <a href="https://www.facebook.com/profile.php?id=61563820252579" target="_blank" rel="noopener noreferrer" class="przycisk">Profil na Facebooku &rarr;</a>
             </div>
-        </div>
-
-        <div class="karta-formularza-kontaktowego">
-            <h3>Napisz wiadomość</h3>
-            <p>Wypełnij formularz poniżej.</p>
-            
-            <div class="wlasny-formularz">
-                <form action="https://formspree.io/f/xvgzobee" method="POST">
-                    <label>Imię i nazwisko</label>
-                    <input type="text" name="name" required placeholder="Twoje imię i nazwisko">
-                    
-                    <label>Adres e-mail</label>
-                    <input type="email" name="email" required placeholder="twoj@email.pl">
-                    
-                    <label>Temat</label>
-                    <input type="text" name="subject" required placeholder="np. Wycena strony WWW">
-                    
-                    <label>Wiadomość</label>
-                    <textarea name="message" rows="5" required placeholder="Opisz swój projekt..."></textarea>
-                    
-                    <button type="submit">Wyślij wiadomość</button>
-                </form>
-            </div>
-        </div>
+        </aside>
     </div>
 </main>
 
