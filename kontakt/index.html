@@ -3,131 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://kmiepaw08-bot.github.io/portfolio/wp-content/themes/moj-motyw/favicon-512x512.png" type="image/png">
+    <link rel="icon" href="../wp-content/themes/moj-motyw/favicon-512x512.png" type="image/png">
     <title>Kontakt &ndash; Paweł Kmiecik</title>
-    <link rel="stylesheet" id="moj-motyw-style-css" href="https://kmiepaw08-bot.github.io/portfolio/wp-content/themes/moj-motyw/style.css?ver=7.0.2" media="all">
+    <link rel="stylesheet" href="../wp-content/themes/moj-motyw/style.css">
 </head>
-<body class="wp-singular page-template-page-kontakt page wp-theme-moj-motyw">
+<body class="page-template-default page wp-theme-moj-motyw">
 
 <header class="naglowek-strony">
     <div class="kontener-naglowka">
-        <a href="https://kmiepaw08-bot.github.io/portfolio/" class="pudelko-logo">
-            <img src="https://kmiepaw08-bot.github.io/portfolio/wp-content/uploads/2026/08/DevInf.svg" alt="DevInformatyk Logo">
+        <a href="https://devinformatyk.github.io/portfolio/" class="pudelko-logo">
+            <img src="../wp-content/uploads/2026/08/DevInf.svg" alt="DevInformatyk Logo">
         </a>
         <nav class="nawigacja-glowna">
-            <ul id="menu-menu-glowne" class="menu">
-                <li class="menu-item"><a href="https://kmiepaw08-bot.github.io/portfolio/">Strona Główna</a></li>
-                <li class="menu-item element-aktualny"><a href="https://kmiepaw08-bot.github.io/portfolio/kontakt/" aria-current="page">Kontakt</a></li>
-                <li class="menu-item"><a href="https://kmiepaw08-bot.github.io/portfolio/uslugi/">Usługi</a></li>
-                <li class="menu-item"><a href="https://kmiepaw08-bot.github.io/portfolio/o-mnie/">O mnie</a></li>
+            <ul class="menu">
+                <li class="menu-item"><a href="https://devinformatyk.github.io/portfolio/">Strona Główna</a></li>
+                <li class="menu-item element-aktualny"><a href="https://devinformatyk.github.io/portfolio/kontakt/" aria-current="page">Kontakt</a></li>
+                <li class="menu-item"><a href="https://devinformatyk.github.io/portfolio/uslugi/">Usługi</a></li>
+                <li class="menu-item"><a href="https://devinformatyk.github.io/portfolio/o-mnie/">O mnie</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
 <main>
-    <section class="strona-kontaktowa">
-        <div class="naglowek-tresci">
-            <h1>Kontakt</h1>
-            <p>Jeśli chcesz omówić szczegóły projektu lub zadać pytanie - napisz przez formularz lub wiadomość prywatną.</p>
-        </div>
+    <div class="naglowek-tresci">
+        <h1 class="tytul-strony">Kontakt</h1>
+        <p>Jeśli chcesz omówić szczegóły projektu lub zadać pytanie – napisz przez formularz lub wiadomość prywatną.</p>
+    </div>
 
-        <div class="siatka-kontaktu">
-            <div class="kolumna-informacji-kontaktowych">
-                <div class="karta-kontaktowa">
-                    <div class="odznaka-statusu">
-                        <span class="kropka-zielona"></span>
-                        <span>Status: Dostępny</span>
-                    </div>
-                    <p>
-                       Przyjmuję nowe zlecenia.
-                    </p>
+    <div class="siatka-kontaktu">
+        <div class="kolumna-informacji-kontaktowych">
+            <div class="karta-kontaktowa">
+                <div class="odznaka-statusu">
+                    <span class="kropka-zielona"></span>
+                    <span>Status: Dostępny</span>
                 </div>
-
-                <div class="karta-kontaktowa">
-                    <h3>Social Media</h3>
-                    <p>
-                        Możesz również napisać bezpośrednio na Facebooku albo Messengerze:
-                    </p>
-                    <a href="https://www.facebook.com/profile.php?id=100046752337336&amp;locale=pl_PL" target="_blank" rel="noopener noreferrer" class="przycisk-facebook">
-                        Profil na Facebooku &rarr;
-                    </a>
-                </div>
+                <p>Przyjmuję nowe zlecenia na strony internetowe oraz aplikacje webowe.</p>
             </div>
 
-            <div class="karta-formularza-kontaktowego">
-                <h3>Napisz wiadomość</h3>
-                <p>Wypełnij formularz poniżej.</p>
-                
-                <div class="wlasny-formularz">
-                    <form id="formularzKontaktowy" action="https://formspree.io/f/xkjwnzvd" method="POST">
-                        <label>Imię i nazwisko
-                            <input type="text" name="imie" required>
-                        </label>
-                        <label>Adres e-mail
-                            <input type="email" name="email" required>
-                        </label>
-                        <label>Temat
-                            <input type="text" name="temat" required>
-                        </label>
-                        <label>Wiadomość
-                            <textarea name="wiadomosc" rows="5"></textarea>
-                        </label>
-                        <button type="submit" id="przyciskWyslij">Wyślij</button>
-                    </form>
-                    <div id="sukcesFormularza" class="komunikat-sukcesu-formularza">
-                        Wiadomość została wysłana.
-                    </div>
-                </div>
+            <div class="karta-kontaktowa">
+                <h3>Social Media</h3>
+                <p>Możesz również napisać bezpośrednio na Facebooku albo Messengerze:</p>
+                <a href="https://www.facebook.com/profile.php?id=61563820252579" target="_blank" rel="noopener noreferrer" class="przycisk-facebook">
+                    Profil na Facebooku &rarr;
+                </a>
             </div>
         </div>
-    </section>
+
+        <div class="karta-formularza-kontaktowego">
+            <h3>Napisz wiadomość</h3>
+            <p>Wypełnij formularz poniżej.</p>
+            
+            <div class="wlasny-formularz">
+                <form action="https://formspree.io/f/xvgzobee" method="POST">
+                    <label>Imię i nazwisko</label>
+                    <input type="text" name="name" required placeholder="Twoje imię i nazwisko">
+                    
+                    <label>Adres e-mail</label>
+                    <input type="email" name="email" required placeholder="twoj@email.pl">
+                    
+                    <label>Temat</label>
+                    <input type="text" name="subject" required placeholder="np. Wycena strony WWW">
+                    
+                    <label>Wiadomość</label>
+                    <textarea name="message" rows="5" required placeholder="Opisz swój projekt..."></textarea>
+                    
+                    <button type="submit">Wyślij wiadomość</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </main>
-
-<script>
-    document.getElementById("formularzKontaktowy").addEventListener("submit", async function(zdarzenie) {
-        zdarzenie.preventDefault();
-        const formularz = zdarzenie.target;
-        const przycisk = document.getElementById("przyciskWyslij");
-        const komunikatSukcesu = document.getElementById("sukcesFormularza");
-        
-        przycisk.disabled = true;
-        przycisk.textContent = "Wysyłanie...";
-
-        try {
-            const odpowiedz = await fetch(formularz.action, {
-                method: formularz.method,
-                body: new FormData(formularz),
-                headers: {
-                    'Accept': 'json'
-                }
-            });
-
-            if (odpowiedz.ok) {
-                formularz.reset();
-                formularz.style.display = "none";
-                komunikatSukcesu.style.display = "block";
-            } else {
-                alert("Nie udało się wysłać wiadomości.");
-                przycisk.disabled = false;
-                przycisk.textContent = "Wyślij";
-            }
-        } catch (blad) {
-            alert("Błąd połączenia z serwerem.");
-            przycisk.disabled = false;
-            przycisk.textContent = "Wyślij";
-        }
-    });
-</script>
 
 <footer class="stopka-minimalna">
     <div class="elastyczna-stopka">
-        <div>&copy; 2026 Paweł Kmiecik. Kodowane od zera.</div>
+        <div>&copy; 2026 Paweł Kmiecik. Kodowane w czystym PHP &amp; CSS.</div>
         <div>
-            <a href="https://kmiepaw08-bot.github.io/portfolio/">Strona Główna</a>
-            <a href="https://kmiepaw08-bot.github.io/portfolio/uslugi/">Usługi</a>
-            <a href="https://kmiepaw08-bot.github.io/portfolio/o-mnie/">O mnie</a>
-            <a href="https://kmiepaw08-bot.github.io/portfolio/kontakt/">Kontakt</a>
+            <a href="https://devinformatyk.github.io/portfolio/">Strona Główna</a>
+            <a href="https://devinformatyk.github.io/portfolio/uslugi/">Usługi</a>
+            <a href="https://devinformatyk.github.io/portfolio/o-mnie/">O mnie</a>
+            <a href="https://devinformatyk.github.io/portfolio/kontakt/">Kontakt</a>
         </div>
     </div>
 </footer>
