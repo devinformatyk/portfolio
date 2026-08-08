@@ -1,6 +1,6 @@
 Theme Name: Mój Motyw
 Author: Dev
-Version: 2.0
+Version: 2.1
 
 * {
     box-sizing: border-box;
@@ -162,7 +162,8 @@ main {
     gap: 10px;
 }
 
-.status-paska-bocznego {
+.status-paska-bocznego,
+.odznaka-statusu {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -172,7 +173,8 @@ main {
     margin-bottom: 10px;
 }
 
-.status-paska-bocznego .kropka {
+.status-paska-bocznego .kropka,
+.odznaka-statusu .kropka {
     width: 10px;
     height: 10px;
     background: #22c55e;
@@ -506,15 +508,6 @@ main {
     border: 1px solid #334155;
     border-radius: 12px;
     padding: 24px;
-}
-
-.odznaka-statusu {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #4ade80;
-    font-weight: 600;
-    margin-bottom: 10px;
 }
 
 .wlasny-formularz form {
