@@ -1,6 +1,18 @@
-Theme Name: Mój Motyw
-Author: Dev
-Version: 2.4
+:root {
+    --bg-body: #0b1120;
+    --bg-header: #0f172a;
+    --bg-card: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --text-sub: #cbd5e1;
+    --border-color: #334155;
+    --border-glow: rgba(56, 189, 248, 0.2);
+    --accent: #38bdf8;
+    --accent-hover: #0284c7;
+    --success: #22c55e;
+    --success-text: #4ade80;
+    --warning: #f59e0b;
+}
 
 * {
     box-sizing: border-box;
@@ -9,8 +21,8 @@ Version: 2.4
 }
 
 body {
-    background-color: #0b1120;
-    color: #94a3b8;
+    background-color: var(--bg-body);
+    color: var(--text-muted);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     display: flex;
@@ -25,12 +37,11 @@ main {
     margin: 40px auto;
     padding: 0 24px;
     box-sizing: border-box;
-    color: #f8fafc;
+    color: var(--text-main);
 }
 
-/* Nagłówek i Nawigacja */
 .naglowek-strony {
-    background-color: #0f172a;
+    background-color: var(--bg-header);
     border-bottom: 1px solid rgba(56, 189, 248, 0.1);
     padding: 16px 0;
 }
@@ -51,7 +62,7 @@ main {
     align-items: center;
     justify-content: center;
     background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(56, 189, 248, 0.2);
+    border: 1px solid var(--border-glow);
     padding: 10px 22px;
     border-radius: 14px;
     text-decoration: none;
@@ -80,7 +91,7 @@ main {
 }
 
 .nawigacja-glowna a {
-    color: #94a3b8;
+    color: var(--text-muted);
     text-decoration: none;
     font-size: 15px;
     font-weight: 600;
@@ -98,7 +109,7 @@ main {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #38bdf8;
+    background-color: var(--accent);
     transition: width 0.3s;
 }
 
@@ -112,10 +123,9 @@ main {
 }
 
 .nawigacja-glowna .element-aktualny a {
-    color: #38bdf8;
+    color: var(--accent);
 }
 
-/* Układ Główny i Pasek Boczny */
 .uklad-glowny {
     display: grid;
     grid-template-columns: 1fr 320px;
@@ -132,23 +142,23 @@ main {
 }
 
 .widzet-paska-bocznego {
-    background: #1e293b;
-    border: 1px solid #334155;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
     padding: 24px;
     border-radius: 12px;
 }
 
 .widzet-paska-bocznego h3 {
-    color: #f8fafc;
+    color: var(--text-main);
     font-size: 18px;
     margin-bottom: 15px;
-    border-left: 3px solid #38bdf8;
+    border-left: 3px solid var(--accent);
     padding-left: 10px;
 }
 
 .widzet-paska-bocznego p {
     font-size: 14px;
-    color: #94a3b8;
+    color: var(--text-muted);
     margin-bottom: 15px;
 }
 
@@ -156,7 +166,7 @@ main {
     list-style: none;
     padding: 0;
     font-size: 14px;
-    color: #cbd5e1;
+    color: var(--text-sub);
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -167,7 +177,7 @@ main {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #4ade80;
+    color: var(--success-text);
     font-weight: 600;
     font-size: 14px;
     margin-bottom: 10px;
@@ -177,11 +187,10 @@ main {
 .odznaka-statusu .kropka {
     width: 10px;
     height: 10px;
-    background: #22c55e;
+    background: var(--success);
     border-radius: 50%;
 }
 
-/* Tytuły i Przyciski */
 .naglowek-strony-tytul {
     margin-bottom: 30px;
 }
@@ -189,14 +198,14 @@ main {
 .naglowek-strony-tytul h1 {
     font-size: 32px;
     color: #ffffff;
-    border-left: 4px solid #38bdf8;
+    border-left: 4px solid var(--accent);
     padding-left: 14px;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
 .naglowek-strony-tytul p {
-    color: #94a3b8;
+    color: var(--text-muted);
     font-size: 16px;
 }
 
@@ -204,26 +213,26 @@ main {
     font-size: 24px;
     color: #ffffff;
     margin-bottom: 20px;
-    border-left: 4px solid #38bdf8;
+    border-left: 4px solid var(--accent);
     padding-left: 12px;
     font-weight: 700;
 }
 
 .pudelko-glowne {
-    background: #1e293b;
+    background: var(--bg-card);
     padding: 40px;
     border-radius: 12px;
-    border: 1px solid #334155;
+    border: 1px solid var(--border-color);
     margin-bottom: 40px;
     transition: border-color 0.3s ease;
 }
 
 .pudelko-glowne:hover {
-    border-color: #38bdf8;
+    border-color: var(--accent);
 }
 
 .pudelko-glowne h1 {
-    color: #38bdf8;
+    color: var(--accent);
     font-size: 32px;
     margin-bottom: 15px;
 }
@@ -235,14 +244,14 @@ main {
 }
 
 .pudelko-glowne p {
-    color: #cbd5e1;
+    color: var(--text-sub);
     font-size: 16px;
 }
 
 .przycisk {
     display: inline-block;
-    background-color: #38bdf8;
-    color: #0f172a;
+    background-color: var(--accent);
+    color: var(--bg-header);
     padding: 12px 24px;
     border-radius: 8px;
     text-decoration: none;
@@ -255,7 +264,7 @@ main {
 }
 
 .przycisk:hover {
-    background-color: #0284c7;
+    background-color: var(--accent-hover);
     color: #ffffff;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
@@ -266,9 +275,9 @@ main {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background-color: #0f172a;
-    color: #94a3b8;
-    border: 1px solid #334155;
+    background-color: var(--bg-header);
+    color: var(--text-muted);
+    border: 1px solid var(--border-color);
     padding: 12px 16px;
     border-radius: 8px;
     text-decoration: none;
@@ -288,7 +297,6 @@ main {
     box-shadow: 0 4px 12px rgba(24, 119, 242, 0.3);
 }
 
-/* Technologie, Projekty i FAQ */
 .sekcja-technologie,
 .sekcja-projekty,
 .sekcja-pytania,
@@ -305,8 +313,8 @@ main {
 }
 
 .karta-technologii {
-    background: #1e293b;
-    border: 1px solid #334155;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
     padding: 12px 20px;
     border-radius: 8px;
     color: #f1f5f9;
@@ -321,8 +329,8 @@ main {
 }
 
 .karta-pytania {
-    background: #1e293b;
-    border: 1px solid #334155;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 24px;
 }
@@ -347,9 +355,9 @@ main {
 }
 
 .karta-projektu {
-    background: #1e293b;
+    background: var(--bg-card);
     border-radius: 12px;
-    border: 1px solid #334155;
+    border: 1px solid var(--border-color);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -359,7 +367,7 @@ main {
 
 .link-karty-projektu:hover .karta-projektu {
     transform: translateY(-5px);
-    border-color: #38bdf8;
+    border-color: var(--accent);
 }
 
 .karta-projektu.w-trakcie {
@@ -373,7 +381,7 @@ main {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border-bottom: 1px solid #334155;
+    border-bottom: 1px solid var(--border-color);
     padding: 15px;
 }
 
@@ -385,18 +393,18 @@ main {
 
 .atrapa-obrazka-projektu {
     height: 180px;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    background: linear-gradient(135deg, var(--bg-header) 0%, var(--bg-card) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #334155;
+    border-bottom: 1px solid var(--border-color);
     padding: 20px;
 }
 
 .pudelko-atrapy {
     width: 85%;
-    background: #0b1120;
-    border: 1px solid rgba(56, 189, 248, 0.2);
+    background: var(--bg-body);
+    border: 1px solid var(--border-glow);
     border-radius: 8px;
     padding: 12px;
 }
@@ -425,13 +433,13 @@ main {
 
 .tekst-atrapy code {
     font-size: 11px;
-    color: #38bdf8;
+    color: var(--accent);
 }
 
 .tekst-atrapy span {
     font-size: 10px;
     background: rgba(56, 189, 248, 0.1);
-    color: #38bdf8;
+    color: var(--accent);
     padding: 2px 6px;
     border-radius: 4px;
 }
@@ -460,13 +468,13 @@ main {
     font-size: 11px;
     font-weight: 600;
     background: rgba(56, 189, 248, 0.15);
-    color: #38bdf8;
+    color: var(--accent);
     border: 1px solid rgba(56, 189, 248, 0.3);
 }
 
 .odznaka-projektu.ostrzezenie {
     background: rgba(245, 158, 11, 0.15);
-    color: #f59e0b;
+    color: var(--warning);
     border-color: rgba(245, 158, 11, 0.3);
 }
 
@@ -479,15 +487,15 @@ main {
 
 .tagi-technologii span {
     font-size: 11px;
-    background: #0f172a;
+    background: var(--bg-header);
     padding: 3px 8px;
     border-radius: 4px;
-    border: 1px solid #334155;
-    color: #38bdf8;
+    border: 1px solid var(--border-color);
+    color: var(--accent);
 }
 
 .link-projektu {
-    color: #38bdf8;
+    color: var(--accent);
     font-weight: 600;
     font-size: 14px;
     margin-top: auto;
@@ -500,7 +508,6 @@ main {
     margin-top: auto;
 }
 
-/* Strona Kontaktowa i Formularz */
 .siatka-kontaktowa {
     display: grid;
     grid-template-columns: 320px 1fr;
@@ -514,8 +521,8 @@ main {
 }
 
 .karta-kontaktowa {
-    background: #1e293b;
-    border: 1px solid #334155;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 24px;
     display: flex;
@@ -531,15 +538,15 @@ main {
 }
 
 .karta-kontaktowa p {
-    color: #94a3b8;
+    color: var(--text-muted);
     font-size: 14px;
     line-height: 1.5;
     margin-bottom: 15px;
 }
 
 .karta-formularza-kontaktowego {
-    background: #1e293b;
-    border: 1px solid #334155;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 24px;
 }
@@ -551,7 +558,7 @@ main {
 }
 
 .karta-formularza-kontaktowego p {
-    color: #94a3b8;
+    color: var(--text-muted);
     font-size: 14px;
 }
 
@@ -566,15 +573,15 @@ main {
     display: flex;
     flex-direction: column;
     gap: 6px;
-    color: #cbd5e1;
+    color: var(--text-sub);
     font-weight: 600;
     font-size: 14px;
 }
 
 .wlasny-formularz input,
 .wlasny-formularz textarea {
-    background: #0f172a;
-    border: 1px solid #334155;
+    background: var(--bg-header);
+    border: 1px solid var(--border-color);
     border-radius: 6px;
     padding: 12px;
     color: #ffffff;
@@ -585,7 +592,7 @@ main {
 .wlasny-formularz input:focus,
 .wlasny-formularz textarea:focus {
     outline: none;
-    border-color: #38bdf8;
+    border-color: var(--accent);
 }
 
 .komunikat-sukcesu-formularza {
@@ -593,13 +600,12 @@ main {
     margin-top: 15px;
     padding: 12px;
     background: rgba(34, 197, 94, 0.15);
-    border: 1px solid #22c55e;
-    color: #4ade80;
+    border: 1px solid var(--success);
+    color: var(--success-text);
     border-radius: 6px;
     text-align: center;
 }
 
-/* Strona Usług i Cennik */
 .siatka-uslug,
 .siatka-cennika {
     display: grid;
@@ -609,8 +615,8 @@ main {
 
 .karta-uslugi,
 .karta-cennika {
-    background: #1e293b;
-    border: 1px solid #334155;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
     padding: 24px;
     border-radius: 12px;
 }
@@ -622,11 +628,11 @@ main {
 }
 
 .karta-cennika.wyrozniona {
-    border-color: #38bdf8;
+    border-color: var(--accent);
 }
 
 .karta-cennika .cena {
-    color: #38bdf8;
+    color: var(--accent);
     font-size: 22px;
     font-weight: bold;
     margin: 8px 0;
@@ -644,20 +650,20 @@ main {
     flex-direction: column;
     gap: 8px;
     font-size: 13px;
-    color: #cbd5e1;
+    color: var(--text-sub);
 }
 
 .lista-cech-cennika li::before {
     content: "✓ ";
-    color: #38bdf8;
+    color: var(--accent);
     font-weight: bold;
 }
 
 .pudelko-informacji-wyceny {
     margin-top: 30px;
-    background: #1e293b;
-    border: 1px solid #334155;
-    border-left: 4px solid #38bdf8;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent);
     border-radius: 12px;
     padding: 24px 28px;
     display: flex;
@@ -673,7 +679,7 @@ main {
 }
 
 .tresc-informacji-wyceny p {
-    color: #94a3b8;
+    color: var(--text-muted);
     font-size: 14px;
     margin: 0;
 }
@@ -683,7 +689,6 @@ main {
     white-space: nowrap;
 }
 
-/* Strona O mnie */
 .siatka-o-mnie {
     display: grid;
     grid-template-columns: 300px 1fr;
@@ -692,8 +697,8 @@ main {
 
 .karta-boczna-o-mnie,
 .karta-glowna-o-mnie {
-    background: #1e293b;
-    border: 1px solid #334155;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 24px;
 }
@@ -702,10 +707,10 @@ main {
     width: 140px;
     height: 140px;
     border-radius: 50%;
-    border: 3px solid #38bdf8;
+    border: 3px solid var(--accent);
     overflow: hidden;
     margin: 0 auto 15px auto;
-    background: #0f172a;
+    background: var(--bg-header);
 }
 
 .pudelko-zdjecia-profilowego img {
@@ -721,7 +726,7 @@ main {
 
 .karta-boczna-o-mnie .rola {
     text-align: center;
-    color: #38bdf8;
+    color: var(--accent);
     font-size: 14px;
     font-weight: 600;
     display: block;
@@ -729,7 +734,7 @@ main {
 }
 
 .szczegoly-informacyjne {
-    border-top: 1px solid #334155;
+    border-top: 1px solid var(--border-color);
     padding-top: 12px;
     margin-top: 15px;
     display: flex;
@@ -748,17 +753,16 @@ main {
 
 .baner-wezwania-do-dzialania {
     margin-top: 30px;
-    background: #1e293b;
-    border: 1px solid #334155;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 30px;
     text-align: center;
 }
 
-/* Stopka Minimalna */
 .stopka-minimalna {
-    background: #0f172a;
-    border-top: 1px solid #1e293b;
+    background: var(--bg-header);
+    border-top: 1px solid var(--bg-card);
     padding: 24px 0;
     margin-top: auto;
 }
@@ -775,21 +779,22 @@ main {
 }
 
 .elastyczna-stopka a {
-    color: #94a3b8;
+    color: var(--text-muted);
     text-decoration: none;
     margin-left: 20px;
     transition: color 0.2s;
 }
 
 .elastyczna-stopka a:hover {
-    color: #38bdf8;
+    color: var(--accent);
 }
 
-/* Wersja Mobilna */
 @media (max-width: 1024px) {
     .uklad-glowny,
     .siatka-kontaktowa,
-    .siatka-o-mnie {
+    .siatka-o-mnie,
+    .siatka-projektow,
+    .siatka-pytan {
         grid-template-columns: 1fr;
     }
 
@@ -797,13 +802,53 @@ main {
         position: static;
     }
 
-    .siatka-projektow,
-    .siatka-pytan {
-        grid-template-columns: 1fr;
-    }
-
     .pudelko-informacji-wyceny {
         flex-direction: column;
         align-items: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .kontener-naglowka {
+        flex-direction: column;
+        gap: 16px;
+        padding: 0 16px;
+    }
+
+    .nawigacja-glowna ul {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nawigacja-glowna a {
+        font-size: 13px;
+    }
+
+    .pudelko-logo img {
+        height: 60px;
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 0 16px;
+    }
+
+    .pudelko-glowne {
+        padding: 24px;
+    }
+
+    .pudelko-glowne h1 {
+        font-size: 24px;
+    }
+
+    .elastyczna-stopka {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .elastyczna-stopka a {
+        margin: 0 8px;
     }
 }
